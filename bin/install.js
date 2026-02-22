@@ -56,7 +56,7 @@ console.log(banner);
 
 // Show help if requested
 if (hasHelp) {
-  console.log(`  ${yellow}Usage:${reset} npx paulopencode-framework [options]
+  console.log(`  ${yellow}Usage:${reset} npx paul-framework [options]
 
   ${yellow}Options:${reset}
     ${cyan}-g, --global${reset}              Install globally (to opencode config directory)
@@ -66,17 +66,17 @@ if (hasHelp) {
 
   ${yellow}Examples:${reset}
     ${dim}# Install to default ~/.opencode directory${reset}
-    npx paulopencode-framework --global
+    npx paul-framework --global
 
     ${dim}# Install to custom config directory${reset}
-    npx paulopencode-framework --global --config-dir ~/.opencode-custom
+    npx paul-framework --global --config-dir ~/.opencode-custom
 
     ${dim}# Install to current project only${reset}
-    npx paulopencode-framework --local
+    npx paul-framework --local
 
   ${yellow}What gets installed:${reset}
     commands/paul/     - Slash commands (/paul:init, /paul:plan, etc.)
-    paulopencode-framework/    - Templates, workflows, references, rules
+    paul-framework/    - Templates, workflows, references, rules
 `);
   process.exit(0);
 }
@@ -148,8 +148,8 @@ function install(isGlobal) {
   copyWithPathReplacement(commandsSrc, commandsDest, pathPrefix);
   console.log(`  ${green}✓${reset} Installed commands/paul`);
 
-  // Copy src/* (except commands) to paulopencode-framework/
-  const skillDest = path.join(opencodeDir, 'paulopencode-framework');
+  // Copy src/* (except commands) to paul-framework/
+  const skillDest = path.join(opencodeDir, 'paul-framework');
   fs.mkdirSync(skillDest, { recursive: true });
 
   const srcDirs = ['templates', 'workflows', 'references', 'rules'];
@@ -160,7 +160,7 @@ function install(isGlobal) {
       copyWithPathReplacement(dirSrc, dirDest, pathPrefix);
     }
   }
-  console.log(`  ${green}✓${reset} Installed paulopencode-framework`);
+  console.log(`  ${green}✓${reset} Installed paul-framework`);
 
   console.log(`
   ${green}Done!${reset} Launch opencode Code and run ${cyan}/paul:help${reset}.
