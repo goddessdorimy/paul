@@ -1,5 +1,5 @@
 ---
-name: paul:complete-milestone
+name: paul-complete-milestone
 description: Mark current milestone as complete
 argument-hint: "[version]"
 allowed-tools: [Read, Write, Edit, Bash, Glob]
@@ -12,7 +12,7 @@ Complete the current milestone, archive it, and evolve PROJECT.md.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/complete-milestone.md
+@~/.opencode/paul-framework/workflows/complete-milestone.md
 </execution_context>
 
 <context>
@@ -25,7 +25,7 @@ $ARGUMENTS
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/complete-milestone.md
+Follow workflow: @~/.opencode/paul-framework/workflows/complete-milestone.md
 </process>
 
 <success_criteria>
