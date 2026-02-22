@@ -1,5 +1,5 @@
 ---
-name: paul:help
+name: paul-help
 description: Show available PAUL commands and usage guide
 ---
 
@@ -17,7 +17,7 @@ Output ONLY the reference content below. Do NOT add:
 <reference>
 # PAUL Command Reference
 
-**PAUL** (Plan-Apply-Unify Loop) is a structured AI-assisted development framework for Claude Code.
+**PAUL** (Plan-Apply-Unify Loop) is a structured AI-assisted development framework for opencode.
 
 ## The Loop
 
@@ -36,10 +36,10 @@ Every unit of work follows this cycle:
 
 ## Quick Start
 
-1. `/paul:init` - Initialize PAUL in your project
-2. `/paul:plan` - Create a plan for your work
-3. `/paul:apply` - Execute the approved plan
-4. `/paul:unify` - Close the loop with summary
+1. `/paul-init` - Initialize PAUL in your project
+2. `/paul-plan` - Create a plan for your work
+3. `/paul-apply` - Execute the approved plan
+4. `/paul-unify` - Close the loop with summary
 
 ## Commands Overview
 
@@ -58,7 +58,7 @@ Every unit of work follows this cycle:
 
 ## Core Loop Commands
 
-### `/paul:init`
+### `/paul-init`
 Initialize PAUL in a project.
 
 - Creates `.paul/` directory structure
@@ -66,11 +66,11 @@ Initialize PAUL in a project.
 - Prompts for project context and phases
 - Optionally configures integrations (SonarQube, etc.)
 
-Usage: `/paul:init`
+Usage: `/paul-init`
 
 ---
 
-### `/paul:plan [phase]`
+### `/paul-plan [phase]`
 Enter PLAN phase - create an executable plan.
 
 - Reads current state from STATE.md
@@ -78,12 +78,12 @@ Enter PLAN phase - create an executable plan.
 - Populates skills section from SPECIAL-FLOWS.md (if configured)
 - Updates loop position
 
-Usage: `/paul:plan` (auto-detects next phase)
-Usage: `/paul:plan 3` (specific phase)
+Usage: `/paul-plan` (auto-detects next phase)
+Usage: `/paul-plan 3` (specific phase)
 
 ---
 
-### `/paul:apply [plan-path]`
+### `/paul-apply [plan-path]`
 Execute an approved PLAN.md file.
 
 - **Blocks if required skills not loaded** (from SPECIAL-FLOWS.md)
@@ -92,12 +92,12 @@ Execute an approved PLAN.md file.
 - Handles checkpoints (decision, human-verify, human-action)
 - Reports completion and prompts for UNIFY
 
-Usage: `/paul:apply`
-Usage: `/paul:apply .paul/phases/01-foundation/01-01-PLAN.md`
+Usage: `/paul-apply`
+Usage: `/paul-apply .paul/phases/01-foundation/01-01-PLAN.md`
 
 ---
 
-### `/paul:unify [plan-path]`
+### `/paul-unify [plan-path]`
 Reconcile plan vs actual and close the loop.
 
 - Creates SUMMARY.md documenting what was built
@@ -106,40 +106,40 @@ Reconcile plan vs actual and close the loop.
 - Updates STATE.md with loop closure
 - **Required** - never skip this step
 
-Usage: `/paul:unify`
-Usage: `/paul:unify .paul/phases/01-foundation/01-01-PLAN.md`
+Usage: `/paul-unify`
+Usage: `/paul-unify .paul/phases/01-foundation/01-01-PLAN.md`
 
 ---
 
-### `/paul:help`
+### `/paul-help`
 Show this command reference.
 
-Usage: `/paul:help`
+Usage: `/paul-help`
 
 ---
 
-### `/paul:status` *(deprecated)*
-> Use `/paul:progress` instead.
+### `/paul-status` *(deprecated)*
+> Use `/paul-progress` instead.
 
-Shows current loop position. Deprecated in favor of `/paul:progress` which provides better routing.
+Shows current loop position. Deprecated in favor of `/paul-progress` which provides better routing.
 
 ---
 
 ## Session Commands
 
-### `/paul:pause [reason]`
+### `/paul-pause [reason]`
 Create handoff file and prepare for session break.
 
 - Creates HANDOFF.md with complete context
 - Updates STATE.md session continuity section
 - Designed for context limits or multi-session work
 
-Usage: `/paul:pause`
-Usage: `/paul:pause "switching to other project"`
+Usage: `/paul-pause`
+Usage: `/paul-pause "switching to other project"`
 
 ---
 
-### `/paul:resume [handoff-path]`
+### `/paul-resume [handoff-path]`
 Restore context from handoff and continue work.
 
 - Reads STATE.md and any HANDOFF files
@@ -147,12 +147,12 @@ Restore context from handoff and continue work.
 - Suggests exactly ONE next action
 - Archives consumed handoffs
 
-Usage: `/paul:resume`
-Usage: `/paul:resume .paul/HANDOFF-context.md`
+Usage: `/paul-resume`
+Usage: `/paul-resume .paul/HANDOFF-context.md`
 
 ---
 
-### `/paul:progress [context]`
+### `/paul-progress [context]`
 Smart status with routing - suggests ONE next action.
 
 - Shows milestone and phase progress visually
@@ -161,61 +161,61 @@ Smart status with routing - suggests ONE next action.
 - Accepts optional context to tailor suggestion
 - Warns about context limits
 
-Usage: `/paul:progress`
-Usage: `/paul:progress "I only have 30 minutes"`
+Usage: `/paul-progress`
+Usage: `/paul-progress "I only have 30 minutes"`
 
 ---
 
-### `/paul:handoff [context]`
+### `/paul-handoff [context]`
 Generate comprehensive session handoff document.
 
 - Creates detailed handoff for complex session breaks
 - Captures decisions, progress, blockers, next steps
-- More thorough than `/paul:pause`
+- More thorough than `/paul-pause`
 
-Usage: `/paul:handoff`
-Usage: `/paul:handoff "phase10-audit"`
+Usage: `/paul-handoff`
+Usage: `/paul-handoff "phase10-audit"`
 
 ---
 
 ## Roadmap Commands
 
-### `/paul:add-phase <description>`
+### `/paul-add-phase <description>`
 Append a new phase to the roadmap.
 
 - Adds phase to end of ROADMAP.md
 - Updates phase numbering
 - Records in STATE.md decisions
 
-Usage: `/paul:add-phase "API Authentication Layer"`
+Usage: `/paul-add-phase "API Authentication Layer"`
 
 ---
 
-### `/paul:remove-phase <number>`
+### `/paul-remove-phase <number>`
 Remove a future (not started) phase from roadmap.
 
 - Cannot remove completed or in-progress phases
 - Renumbers subsequent phases
 - Updates ROADMAP.md
 
-Usage: `/paul:remove-phase 5`
+Usage: `/paul-remove-phase 5`
 
 ---
 
 ## Milestone Commands
 
-### `/paul:milestone <name>`
+### `/paul-milestone <name>`
 Create a new milestone with phases.
 
 - Guides through milestone definition
 - Creates phase structure
 - Updates ROADMAP.md with milestone grouping
 
-Usage: `/paul:milestone "v2.0 API Redesign"`
+Usage: `/paul-milestone "v2.0 API Redesign"`
 
 ---
 
-### `/paul:complete-milestone [version]`
+### `/paul-complete-milestone [version]`
 Archive milestone, tag, and reorganize roadmap.
 
 - Verifies all phases complete
@@ -223,72 +223,72 @@ Archive milestone, tag, and reorganize roadmap.
 - Archives milestone to MILESTONES.md
 - Evolves PROJECT.md for next milestone
 
-Usage: `/paul:complete-milestone`
-Usage: `/paul:complete-milestone v0.3`
+Usage: `/paul-complete-milestone`
+Usage: `/paul-complete-milestone v0.3`
 
 ---
 
-### `/paul:discuss-milestone`
+### `/paul-discuss-milestone`
 Explore and articulate vision before starting a milestone.
 
 - Conversational exploration of goals
 - Creates milestone context document
-- Prepares for `/paul:milestone`
+- Prepares for `/paul-milestone`
 
-Usage: `/paul:discuss-milestone`
+Usage: `/paul-discuss-milestone`
 
 ---
 
 ## Pre-Planning Commands
 
-### `/paul:discuss <phase>`
+### `/paul-discuss <phase>`
 Articulate vision and explore approach before planning.
 
 - Conversational discussion of phase goals
 - Creates CONTEXT.md capturing vision
-- Prepares for `/paul:plan`
+- Prepares for `/paul-plan`
 
-Usage: `/paul:discuss 3`
-Usage: `/paul:discuss "authentication layer"`
+Usage: `/paul-discuss 3`
+Usage: `/paul-discuss "authentication layer"`
 
 ---
 
-### `/paul:assumptions <phase>`
-Surface Claude's assumptions about a phase before planning.
+### `/paul-assumptions <phase>`
+Surface opencode's assumptions about a phase before planning.
 
-- Shows what Claude would do if given free rein
+- Shows what opencode would do if given free rein
 - Identifies gaps in understanding
 - Prevents misaligned planning
 
-Usage: `/paul:assumptions 3`
+Usage: `/paul-assumptions 3`
 
 ---
 
-### `/paul:discover <topic>`
+### `/paul-discover <topic>`
 Research technical options before planning a phase.
 
 - Explores codebase for relevant patterns
 - Documents findings for planning reference
 - Lightweight alternative to full research
 
-Usage: `/paul:discover "authentication patterns"`
+Usage: `/paul-discover "authentication patterns"`
 
 ---
 
-### `/paul:consider-issues [source]`
+### `/paul-consider-issues [source]`
 Review deferred issues with codebase context, triage and route.
 
 - Reads deferred issues from STATE.md or specified source
 - Analyzes with current codebase context
 - Suggests routing: fix now, defer, or close
 
-Usage: `/paul:consider-issues`
+Usage: `/paul-consider-issues`
 
 ---
 
 ## Research Commands
 
-### `/paul:research <topic>`
+### `/paul-research <topic>`
 Deploy research agents for documentation/web search.
 
 - Spawns subagents for parallel research
@@ -296,77 +296,77 @@ Deploy research agents for documentation/web search.
 - Creates RESEARCH.md with findings
 - Main session vets and reviews results
 
-Usage: `/paul:research "JWT best practices 2026"`
+Usage: `/paul-research "JWT best practices 2026"`
 
 ---
 
-### `/paul:research-phase <number>`
+### `/paul-research-phase <number>`
 Research unknowns for a phase using subagents.
 
 - Identifies unknowns in phase scope
 - Deploys research agents
 - Synthesizes findings for planning
 
-Usage: `/paul:research-phase 4`
+Usage: `/paul-research-phase 4`
 
 ---
 
 ## Specialized Commands
 
-### `/paul:flows`
+### `/paul-flows`
 Configure specialized workflow integrations.
 
 - Creates/updates SPECIAL-FLOWS.md
 - Defines required skills per work type
 - Skills are enforced at APPLY time
 
-Usage: `/paul:flows`
+Usage: `/paul-flows`
 
 ---
 
-### `/paul:config`
+### `/paul-config`
 View or modify PAUL configuration.
 
 - Shows current config.md settings
 - Allows toggling integrations
 - Manages project-level settings
 
-Usage: `/paul:config`
+Usage: `/paul-config`
 
 ---
 
-### `/paul:map-codebase`
+### `/paul-map-codebase`
 Generate codebase map for context.
 
 - Creates structured overview of project
 - Identifies key files and patterns
 - Useful for research and planning
 
-Usage: `/paul:map-codebase`
+Usage: `/paul-map-codebase`
 
 ---
 
 ## Quality Commands
 
-### `/paul:verify`
+### `/paul-verify`
 Guide manual user acceptance testing of recently built features.
 
 - Generates verification checklist from SUMMARY.md
 - Guides through manual testing
 - Records verification results
 
-Usage: `/paul:verify`
+Usage: `/paul-verify`
 
 ---
 
-### `/paul:plan-fix`
+### `/paul-plan-fix`
 Plan fixes for UAT issues from verify.
 
 - Reads issues identified during verify
 - Creates targeted fix plan
 - Smaller scope than full phase plan
 
-Usage: `/paul:plan-fix`
+Usage: `/paul-plan-fix`
 
 ---
 
@@ -441,42 +441,42 @@ Completion checks
 
 **Starting a new project:**
 ```
-/paul:init
-/paul:plan
+/paul-init
+/paul-plan
 # Approve plan
-/paul:apply
-/paul:unify
+/paul-apply
+/paul-unify
 ```
 
 **Checking where you are:**
 ```
-/paul:progress   # State + ONE next action (recommended)
+/paul-progress   # State + ONE next action (recommended)
 ```
 
 **Resuming work (new session):**
 ```
-/paul:resume     # Restores context, suggests next action
+/paul-resume     # Restores context, suggests next action
 ```
 
 **Pausing work (before break):**
 ```
-/paul:pause      # Creates handoff, updates state
+/paul-pause      # Creates handoff, updates state
 ```
 
 **Pre-planning exploration:**
 ```
-/paul:discuss 3       # Articulate vision
-/paul:assumptions 3   # See Claude's assumptions
-/paul:research "topic"  # Gather external info
-/paul:plan 3          # Now create the plan
+/paul-discuss 3       # Articulate vision
+/paul-assumptions 3   # See opencode's assumptions
+/paul-research "topic"  # Gather external info
+/paul-plan 3          # Now create the plan
 ```
 
 **Managing roadmap:**
 ```
-/paul:add-phase "New Feature"    # Add phase
-/paul:remove-phase 5             # Remove future phase
-/paul:milestone "v2.0"           # Create milestone
-/paul:complete-milestone         # Archive milestone
+/paul-add-phase "New Feature"    # Add phase
+/paul-remove-phase 5             # Remove future phase
+/paul-milestone "v2.0"           # Create milestone
+/paul-complete-milestone         # Archive milestone
 ```
 
 ## Key Principles
@@ -490,7 +490,7 @@ Completion checks
 
 ## Getting Help
 
-- Run `/paul:progress` to see where you are and what to do next
+- Run `/paul-progress` to see where you are and what to do next
 - Read `.paul/PROJECT.md` for project context
 - Read `.paul/STATE.md` for current position
 - Check `.paul/ROADMAP.md` for phase overview
