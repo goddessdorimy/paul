@@ -1,5 +1,5 @@
 ---
-name: paul:flows
+name: paul-flows
 description: Configure specialized workflow integrations
 argument-hint: "[add|audit|list]"
 allowed-tools: [Read, Write, Bash, Glob]
@@ -22,8 +22,8 @@ Configure, amend, or audit specialized skill integrations for a PAUL project.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/configure-special-flows.md
-@~/.claude/paul-framework/references/specialized-workflow-integration.md
+@~/.opencode/paul-framework/workflows/configure-special-flows.md
+@~/.opencode/paul-framework/references/specialized-workflow-integration.md
 </execution_context>
 
 <context>
