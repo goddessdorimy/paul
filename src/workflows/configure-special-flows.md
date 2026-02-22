@@ -4,7 +4,7 @@ Configure specialized skill integrations for a PAUL project. Discovers available
 
 <when_to_use>
 - During init when user has specialized skills/commands
-- Ad-hoc via `/paul:flows` command
+- Ad-hoc via `/paul-flows` command
 - When adding new skills to an existing project
 - When amending existing SPECIAL-FLOWS.md
 </when_to_use>
@@ -46,7 +46,7 @@ Can be run at any time without affecting PLAN/APPLY/UNIFY state.
 <step name="discover_available_skills">
 1. Scan for available skills:
    ```bash
-   ls ~/.claude/commands/ 2>/dev/null | head -20
+   ls ~/.opencode/commands/ 2>/dev/null | head -20
    ```
 
 2. Present categorized list to user:
@@ -194,7 +194,7 @@ Repeat or ask "Add another asset? [y/n]"
 
    ────────────────────────────────────────
    Verification will occur during UNIFY.
-   Run /paul:flows audit to check current phase.
+   Run /paul-flows audit to check current phase.
    ────────────────────────────────────────
    ```
 </step>
@@ -256,10 +256,10 @@ Display current configuration:
 </output>
 
 <error_handling>
-**No .claude/commands/ directory:**
+**No .opencode/commands/ directory:**
 ```
-No skills directory found at ~/.claude/commands/
-Add skills to your Claude Code configuration first.
+No skills directory found at ~/.opencode/commands/
+Add skills to your opencode Code configuration first.
 
 You can still manually specify skill names.
 Enter skill names (comma-separated) or "skip":
@@ -274,10 +274,10 @@ Enter skill names (comma-separated) or "skip":
 **No .paul/ directory:**
 ```
 PAUL not initialized in this project.
-Run /paul:init first, or create .paul/ manually.
+Run /paul-init first, or create .paul/ manually.
 ```
 
 **User provides invalid skill name:**
 - Warn but proceed (skill may exist elsewhere)
-- Note: "Skill not found in ~/.claude/commands/ but adding anyway"
+- Note: "Skill not found in ~/.opencode/commands/ but adding anyway"
 </error_handling>
