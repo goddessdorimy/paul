@@ -1,8 +1,8 @@
 ---
-name: paul:init
+name: paul-init
 description: Initialize PAUL in a project with conversational setup
 argument-hint:
-allowed-tools: [Read, Write, Bash, Glob, AskUserQuestion]
+allowed-tools: [Read, Write, Bash, Glob, Question]
 ---
 
 <objective>
@@ -14,10 +14,10 @@ Creates PROJECT.md, STATE.md, and ROADMAP.md populated from conversation - user 
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/init-project.md
-@~/.claude/paul-framework/templates/PROJECT.md
-@~/.claude/paul-framework/templates/STATE.md
-@~/.claude/paul-framework/templates/ROADMAP.md
+@~/.opencode/paul-framework/workflows/init-project.md
+@~/.opencode/paul-framework/templates/PROJECT.md
+@~/.opencode/paul-framework/templates/STATE.md
+@~/.opencode/paul-framework/templates/ROADMAP.md
 </execution_context>
 
 <context>
@@ -25,7 +25,7 @@ Current directory state (check for existing .paul/)
 </context>
 
 <process>
-**Follow workflow: @~/.claude/paul-framework/workflows/init-project.md**
+**Follow workflow: @~/.opencode/paul-framework/workflows/init-project.md**
 
 The workflow implements conversational setup:
 
@@ -35,7 +35,7 @@ The workflow implements conversational setup:
 4. Ask: "What are you building?"
 5. Confirm project name (infer from directory)
 6. Populate PROJECT.md, ROADMAP.md, STATE.md from answers
-7. Display ONE next action: `/paul:plan`
+7. Display ONE next action: `/paul-plan`
 
 **Key behaviors:**
 - Ask ONE question at a time
