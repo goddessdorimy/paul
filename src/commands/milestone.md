@@ -1,8 +1,8 @@
 ---
-name: paul:milestone
+name: paul-milestone
 description: Create a new milestone in the project
 argument-hint: "[milestone-name]"
-allowed-tools: [Read, Write, Edit, Bash, Glob, AskUserQuestion]
+allowed-tools: [Read, Write, Edit, Bash, Glob, Question]
 ---
 
 <objective>
@@ -12,7 +12,7 @@ Create a new milestone with defined scope and phases.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/create-milestone.md
+@~/.opencode/paul-framework/workflows/create-milestone.md
 </execution_context>
 
 <context>
@@ -24,7 +24,7 @@ $ARGUMENTS
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/create-milestone.md
+Follow workflow: @~/.opencode/paul-framework/workflows/create-milestone.md
 </process>
 
 <success_criteria>
