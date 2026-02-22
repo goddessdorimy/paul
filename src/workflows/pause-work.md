@@ -19,8 +19,8 @@ Any position in PLAN/APPLY/UNIFY loop. Captures state regardless of where loop i
 </required_reading>
 
 <references>
-@~/.claude/paul-framework/references/context-management.md
-@~/.claude/paul-framework/templates/HANDOFF.md
+@~/.opencode/paul-framework/references/context-management.md
+@~/.opencode/paul-framework/templates/HANDOFF.md
 </references>
 
 <process>
@@ -130,14 +130,14 @@ PLAN ──▶ APPLY ──▶ UNIFY
 
 1. Read `.paul/STATE.md` for latest position
 2. Check loop position
-3. Run `/paul:resume` or `/paul:progress`
+3. Run `/paul-resume` or `/paul-progress`
 
 ---
 
 *Handoff created: [timestamp]*
 ```
 
-Be specific enough for a fresh Claude to understand immediately.
+Be specific enough for a fresh opencode to understand immediately.
 </step>
 
 <step name="update_state">
@@ -189,7 +189,7 @@ Note: Feature branch is useful if work isn't ready for main.
 git add .paul/ src/
 git commit -m "wip({phase}): paused at {plan}
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: opencode <noreply@anthropic.com>"
 ```
 
 **If feature branch (option 2):**
@@ -201,7 +201,7 @@ git checkout -b feature/{phase-name}
 git add .paul/ src/
 git commit -m "wip({phase}): paused at {plan}
 
-Co-Authored-By: Claude <noreply@anthropic.com>"
+Co-Authored-By: opencode <noreply@anthropic.com>"
 
 # Record branch strategy in STATE.md for transition-phase
 ```
@@ -230,7 +230,7 @@ Current State:
   Loop: [PLAN/APPLY/UNIFY position]
 
 To resume later:
-  /paul:resume
+  /paul-resume
 
 ════════════════════════════════════════
 ```
