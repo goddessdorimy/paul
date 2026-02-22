@@ -1,5 +1,5 @@
 ---
-name: paul:assumptions
+name: paul-assumptions
 description: Surface Claude's assumptions about a phase before planning
 argument-hint: "<phase-number>"
 allowed-tools: [Read, Bash]
@@ -10,11 +10,11 @@ Surface Claude's assumptions about a phase to validate understanding before plan
 
 **When to use:** Before planning to catch misconceptions early.
 
-**Distinction from /paul:discuss:** This command shows what CLAUDE thinks. The discuss command gathers what USER wants.
+**Distinction from /paul-discuss:** This command shows what OPENCODE thinks. The discuss command gathers what USER wants.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/phase-assumptions.md
+@~/.opencode/paul-framework/workflows/phase-assumptions.md
 </execution_context>
 
 <context>
@@ -26,7 +26,7 @@ Phase number: $ARGUMENTS (required)
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/phase-assumptions.md
+Follow workflow: @~/.opencode/paul-framework/workflows/phase-assumptions.md
 </process>
 
 <success_criteria>
