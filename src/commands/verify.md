@@ -1,21 +1,21 @@
 ---
-name: paul:verify
+name: paul-verify
 description: Guide manual user acceptance testing of recently built features
 argument-hint: "[optional: phase or plan number, e.g., '4' or '04-02']"
-allowed-tools: [Read, Bash, Glob, Grep, Edit, Write, AskUserQuestion]
+allowed-tools: [Read, Bash, Glob, Grep, Edit, Write, Question]
 ---
 
 <objective>
 Guide the user through manual acceptance testing of recently built features.
 
-**When to use:** After completing a plan, validate that what Claude built actually works from the user's perspective.
+**When to use:** After completing a plan, validate that what opencode built actually works from the user's perspective.
 
-**Who tests:** The USER performs all testing. Claude generates the test checklist, guides the process, and captures issues.
+**Who tests:** The USER performs all testing. opencode generates the test checklist, guides the process, and captures issues.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/verify-work.md
-@~/.claude/paul-framework/templates/UAT-ISSUES.md
+@~/.opencode/paul-framework/workflows/verify-work.md
+@~/.opencode/paul-framework/templates/UAT-ISSUES.md
 </execution_context>
 
 <context>
@@ -28,7 +28,7 @@ Scope: $ARGUMENTS (optional)
 </context>
 
 <process>
-**Follow workflow: @~/.claude/paul-framework/workflows/verify-work.md**
+**Follow workflow: @~/.opencode/paul-framework/workflows/verify-work.md**
 
 The workflow implements:
 1. Identify test scope (specified or most recent SUMMARY)
