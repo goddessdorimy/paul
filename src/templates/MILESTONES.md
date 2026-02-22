@@ -124,7 +124,7 @@ Include decimal phases in the range when relevant:
 - Handoff file generation for session breaks
 - STATE.md Session Continuity section
 - SonarQube integration (optional)
-- Codebase CLAUDE.md improvements
+- Codebase opencode.md improvements
 
 **Stats:**
 | Metric | Value |
