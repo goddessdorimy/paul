@@ -1,8 +1,8 @@
 ---
-name: paul:discuss-milestone
+name: paul-discuss-milestone
 description: Explore and articulate next milestone vision
 argument-hint: ""
-allowed-tools: [Read, Write, AskUserQuestion]
+allowed-tools: [Read, Write, Question]
 ---
 
 <objective>
@@ -12,7 +12,7 @@ Facilitate vision discussion for the next milestone and create context handoff.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/discuss-milestone.md
+@~/.opencode/paul-framework/workflows/discuss-milestone.md
 </execution_context>
 
 <context>
@@ -23,11 +23,11 @@ Facilitate vision discussion for the next milestone and create context handoff.
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/discuss-milestone.md
+Follow workflow: @~/.opencode/paul-framework/workflows/discuss-milestone.md
 </process>
 
 <success_criteria>
 - [ ] MILESTONE-CONTEXT.md created with vision
 - [ ] Key themes and goals articulated
-- [ ] Ready for /paul:milestone command
+- [ ] Ready for /paul-milestone command
 </success_criteria>
