@@ -4,9 +4,9 @@
 
 PLAN.md IS the executable prompt. It contains everything needed to execute a phase: objective, context, acceptance criteria, tasks, boundaries, verification, and output specification.
 
-**Core principle:** A plan is Claude-executable when Claude can read the PLAN.md and immediately start implementing without asking clarifying questions.
+**Core principle:** A plan is opencode-executable when opencode can read the PLAN.md and immediately start implementing without asking clarifying questions.
 
-If Claude has to guess, interpret, or make assumptions - the task is too vague.
+If opencode has to guess, interpret, or make assumptions - the task is too vague.
 
 ## Frontmatter
 
@@ -193,7 +193,7 @@ Boundaries prevent scope creep by making off-limits areas explicit.
   <done>Users can authenticate</done>
 </task>
 ```
-Claude: "How? What type? What library? Where?"
+opencode: "How? What type? What library? Where?"
 
 ### Just Right
 ```xml
@@ -210,10 +210,10 @@ Claude: "How? What type? What library? Where?"
   <done>AC-1 satisfied: Valid credentials → 200 + cookie</done>
 </task>
 ```
-Claude can implement immediately.
+opencode can implement immediately.
 
 ### Too Detailed
-Writing the actual code in the plan. Trust Claude to implement from clear instructions.
+Writing the actual code in the plan. Trust opencode to implement from clear instructions.
 
 ## Sizing Guidance
 
