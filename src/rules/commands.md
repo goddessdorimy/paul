@@ -11,10 +11,10 @@ Rules for editing files in `src/commands/`.
 
 ```yaml
 ---
-name: paul:command-name
+name: paul-command-name
 description: One-line description
 argument-hint: "<required>" or "[optional]"
-allowed-tools: [Read, Write, Bash, Glob, Grep, Edit, AskUserQuestion]
+allowed-tools: [Read, Write, Bash, Glob, Grep, Edit, Question]
 ---
 ```
 
@@ -70,7 +70,7 @@ Use checkbox format. Each criterion must be objectively verifiable.
 
 ```markdown
 ---
-name: paul:plan
+name: paul-plan
 description: Enter PLAN phase for current or new plan
 argument-hint: "[phase-plan]"
 allowed-tools: [Read, Write, Glob, AskUserQuestion]
