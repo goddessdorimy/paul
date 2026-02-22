@@ -19,7 +19,7 @@ Research informs planning but doesn't gate it.
 </loop_context>
 
 <required_reading>
-@~/.claude/paul-framework/references/subagent-criteria.md
+@~/.opencode/paul-framework/references/subagent-criteria.md
 </required_reading>
 
 <references>
@@ -35,11 +35,11 @@ Research informs planning but doesn't gate it.
 ```
 Error: Topic required.
 
-Usage: /paul:research <topic> [--codebase | --web]
+Usage: /paul-research <topic> [--codebase | --web]
 Examples:
-  /paul:research "nextjs app router patterns"
-  /paul:research "auth patterns in this codebase" --codebase
-  /paul:research "prisma vs drizzle comparison" --web
+  /paul-research "nextjs app router patterns"
+  /paul-research "auth patterns in this codebase" --codebase
+  /paul-research "prisma vs drizzle comparison" --web
 ```
 Exit workflow.
 
