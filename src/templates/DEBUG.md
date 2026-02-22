@@ -67,8 +67,8 @@ files_changed: []
 
 **Current Focus:**
 - OVERWRITE entirely on each update
-- Always reflects what Claude is doing RIGHT NOW
-- If Claude reads this after context reset, it knows exactly where to resume
+- Always reflects what opencode is doing RIGHT NOW
+- If opencode reads this after context reset, it knows exactly where to resume
 - Fields: hypothesis, test, expecting, next_action
 
 **Symptoms:**
@@ -140,7 +140,7 @@ files_changed: []
 
 <resume_behavior>
 
-When Claude reads this file after context reset:
+When opencode reads this file after context reset:
 
 1. Parse frontmatter → know status
 2. Read Current Focus → know exactly what was happening
@@ -148,7 +148,7 @@ When Claude reads this file after context reset:
 4. Read Evidence → know what's been learned
 5. Continue from next_action
 
-The file IS the debugging brain. Claude should be able to resume perfectly from any interruption point.
+The file IS the debugging brain. opencode should be able to resume perfectly from any interruption point.
 
 </resume_behavior>
 
