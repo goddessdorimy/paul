@@ -7,16 +7,16 @@ Guide plan sizing to maintain consistent quality. Plans must complete within ~50
 </purpose>
 
 <quality_insight>
-Claude degrades when it perceives context pressure and enters "completion mode."
+opencode degrades when it perceives context pressure and enters "completion mode."
 
-| Context Usage | Quality | Claude's State |
+| Context Usage | Quality | opencode's State |
 |---------------|---------|----------------|
 | 0-30% | PEAK | Thorough, comprehensive |
 | 30-50% | GOOD | Confident, solid work |
 | 50-70% | DEGRADING | Efficiency mode begins |
 | 70%+ | POOR | Rushed, minimal |
 
-**The 40-50% inflection point:** Claude sees context mounting and thinks "I'd better conserve now." Result: quality crash.
+**The 40-50% inflection point:** opencode sees context mounting and thinks "I'd better conserve now." Result: quality crash.
 
 **The rule:** Stop BEFORE quality degrades, not at context limit.
 </quality_insight>
