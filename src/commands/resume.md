@@ -1,5 +1,5 @@
 ---
-name: paul:resume
+name: paul-resume
 description: Restore context from handoff and continue work
 argument-hint: "[optional: handoff path, e.g., '.paul/HANDOFF-phase10-audit.md']"
 allowed-tools: [Read, Glob, Bash]
@@ -14,7 +14,7 @@ Restore PAUL context after a session break, determine current position, and sugg
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/resume-project.md
+@~/.opencode/paul-framework/workflows/resume-project.md
 </execution_context>
 
 <context>
@@ -24,7 +24,7 @@ $ARGUMENTS (optional handoff path)
 </context>
 
 <process>
-**Follow workflow: @~/.claude/paul-framework/workflows/resume-project.md**
+**Follow workflow: @~/.opencode/paul-framework/workflows/resume-project.md**
 
 The workflow implements:
 1. Verify .paul/ exists
