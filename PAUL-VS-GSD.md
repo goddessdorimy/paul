@@ -18,7 +18,7 @@ Where GSD focuses on *getting work done*, PAUL focuses on *getting work done cor
 
 **GSD:** PLAN → EXECUTE → (implicit review)
 
-**PAUL:** PLAN → APPLY → UNIFY (enforced)
+**paul-** PLAN → APPLY → UNIFY (enforced)
 
 The UNIFY phase isn't optional. Every plan produces a SUMMARY.md that captures:
 - What actually happened vs. what was planned
@@ -34,7 +34,7 @@ The UNIFY phase isn't optional. Every plan produces a SUMMARY.md that captures:
 
 **GSD:** Spawns subagents for plan execution, pursuing speed through parallelization.
 
-**PAUL:** Executes in the current context by default, optimizing for token-to-value efficiency.
+**paul-** Executes in the current context by default, optimizing for token-to-value efficiency.
 
 The parallel-subagent approach sounds fast on paper. In practice, it's expensive and wasteful:
 - Each subagent starts cold, requiring context injection
@@ -54,7 +54,7 @@ Subagents in PAUL are reserved for their optimal use case: **parallel research a
 
 **GSD:** Presents multiple options after each step ("Would you like to: A, B, C, or D?")
 
-**PAUL:** Suggests ONE best path based on current state.
+**paul-** Suggests ONE best path based on current state.
 
 Decision fatigue is real. PAUL analyzes project state and recommends the most logical next step. Users can always redirect, but the default is momentum, not menu navigation.
 
@@ -66,7 +66,7 @@ Decision fatigue is real. PAUL analyzes project state and recommends the most lo
 
 **GSD:** Implicit state via `.continue-here.md` in phase directories.
 
-**PAUL:** Explicit `HANDOFF-{date}.md` files with loop position, decisions, and prioritized next actions.
+**paul-** Explicit `HANDOFF-{date}.md` files with loop position, decisions, and prioritized next actions.
 
 PAUL handoffs are designed for zero-context resumption. They capture not just *where* you stopped, but *why* you were doing what you were doing and *what* decisions led there.
 
@@ -78,7 +78,7 @@ PAUL handoffs are designed for zero-context resumption. They capture not just *w
 
 **GSD:** Tasks describe what to do.
 
-**PAUL:** Tasks link to numbered acceptance criteria (AC-1, AC-2, AC-3) with Given/When/Then format.
+**paul-** Tasks link to numbered acceptance criteria (AC-1, AC-2, AC-3) with Given/When/Then format.
 
 Every PLAN.md includes explicit acceptance criteria. Every SUMMARY.md reports pass/fail against those criteria. This creates verifiable quality gates, not just completion checkboxes.
 
@@ -90,7 +90,7 @@ Every PLAN.md includes explicit acceptance criteria. Every SUMMARY.md reports pa
 
 **GSD:** Scope guidance in plans.
 
-**PAUL:** Explicit `## Boundaries` section in every PLAN.md with DO NOT CHANGE declarations.
+**paul-** Explicit `## Boundaries` section in every PLAN.md with DO NOT CHANGE declarations.
 
 When you specify boundaries, PAUL treats them as hard constraints, not suggestions. Modifications to protected items require explicit confirmation.
 
@@ -102,7 +102,7 @@ When you specify boundaries, PAUL treats them as hard constraints, not suggestio
 
 **GSD:** No mechanism for tracking specialized workflow usage.
 
-**PAUL:** `SPECIAL-FLOWS.md` declares required skills per project. UNIFY audits whether they were invoked.
+**paul-** `SPECIAL-FLOWS.md` declares required skills per project. UNIFY audits whether they were invoked.
 
 If your project requires `/commit` or `/review-pr` or custom skills, PAUL tracks whether they were actually used — preventing "forgot to run the linter" moments.
 
@@ -114,7 +114,7 @@ If your project requires `/commit` or `/review-pr` or custom skills, PAUL tracks
 
 **GSD:** Integer phases only. Urgent work requires phase insertion and renumbering.
 
-**PAUL:** Decimal phases (8.1, 8.2) for urgent interruptions without disrupting the roadmap.
+**paul-** Decimal phases (8.1, 8.2) for urgent interruptions without disrupting the roadmap.
 
 When something urgent lands mid-milestone, PAUL slots it as a decimal phase. The original plan stays intact, and the interruption is clearly marked as an insertion.
 
@@ -156,11 +156,11 @@ When something urgent lands mid-milestone, PAUL slots it as a decimal phase. The
 
 ## The Bottom Line
 
-GSD answers: *"How do I get Claude to execute a plan fast?"*
+GSD answers: *"How do I get opencode to execute a plan fast?"*
 
 PAUL answers: *"How do I get maximum value from every token spent?"*
 
-The insight: AI development is already fast. Using Claude at all *is* the speed advantage. The marginal gains from parallel subagent execution come at significant cost — more tokens, more coordination, more garbage output, less coherent results.
+The insight: AI development is already fast. Using opencode at all *is* the speed advantage. The marginal gains from parallel subagent execution come at significant cost — more tokens, more coordination, more garbage output, less coherent results.
 
 PAUL doesn't try to enhance the enhancement. It takes what AI gives us and makes it **as valuable as possible** — through explicit reconciliation, preserved context, verifiable quality gates, and disciplined loop closure.
 
