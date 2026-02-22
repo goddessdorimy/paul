@@ -1,14 +1,14 @@
 <principles>
 Core principles for the PAUL development workflow.
 
-<solo_developer_claude>
+<solo_developer_opencode>
 
-You are planning for ONE person (the user) and ONE implementer (Claude).
+You are planning for ONE person (the user) and ONE implementer (opencode).
 - No teams, stakeholders, ceremonies, coordination overhead
 - User is the visionary/product owner
-- Claude is the builder
+- opencode is the builder
 - Estimate effort in context usage, not human dev time
-</solo_developer_claude>
+</solo_developer_opencode>
 
 <plans_are_prompts>
 
@@ -72,12 +72,12 @@ Plans must complete within reasonable context usage.
 - Target ~50% context per plan (40% for TDD plans)
 </scope_control>
 
-<claude_automates>
+<opencode_automates>
 
-If Claude CAN do it via CLI/API/tool, Claude MUST do it.
+If opencode CAN do it via CLI/API/tool, opencode MUST do it.
 
 Checkpoints are for:
-- **Verification** - Human confirms Claude's work (visual, UX)
+- **Verification** - Human confirms opencode's work (visual, UX)
 - **Decision** - Human makes implementation choice
 
 Not for:
@@ -85,7 +85,7 @@ Not for:
 - Creating resources (use CLI/API)
 - Running builds/tests (use Bash)
 - Writing files (use Write tool)
-</claude_automates>
+</opencode_automates>
 
 <deviation_rules>
 
