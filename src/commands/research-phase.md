@@ -1,5 +1,5 @@
 ---
-name: paul:research-phase
+name: paul-research-phase
 description: Research unknowns for a phase using subagents
 argument-hint: "<phase-number>"
 allowed-tools: [Read, Task, Bash, Write]
@@ -10,16 +10,16 @@ Analyze a phase for unknowns and research them using subagents.
 
 **When to use:** Before planning a phase when there are technical unknowns that need investigation.
 
-**Distinction from /paul:research:**
-- `/paul:research <topic>`: User knows what to research
-- `/paul:research-phase <N>`: Claude identifies what needs researching
+**Distinction from /paul-research:**
+- `/paul-research <topic>`: User knows what to research
+- `/paul-research-phase <N>`: opencode identifies what needs researching
 
 **Subagent orchestration:** Spawns multiple research agents in parallel for independent unknowns.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/research.md
-@~/.claude/paul-framework/references/subagent-criteria.md
+@~/.opencode/paul-framework/workflows/research.md
+@~/.opencode/paul-framework/references/subagent-criteria.md
 </execution_context>
 
 <context>
@@ -39,8 +39,8 @@ Phase number: $ARGUMENTS (required)
 ```
 Error: Phase number required.
 
-Usage: /paul:research-phase <phase-number>
-Example: /paul:research-phase 10
+Usage: /paul-research-phase <phase-number>
+Example: /paul-research-phase 10
 ```
 Exit workflow.
 
@@ -190,8 +190,8 @@ automatically integrate into plans.
 
 What's next?
 [1] Review consolidated findings
-[2] Plan this phase (/paul:plan)
-[3] Discuss this phase (/paul:discuss)
+[2] Plan this phase (/paul-plan)
+[3] Discuss this phase (/paul-discuss)
 [4] Done for now
 ────────────────────────────────────────
 ```
