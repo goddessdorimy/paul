@@ -24,7 +24,7 @@ ${cyan}  ██████╗  █████╗ ██╗   ██╗██�
   ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚══════╝${reset}
 
   PAUL Framework ${dim}v${pkg.version}${reset}
-  Plan-Apply-Unify Loop for Claude Code
+  Plan-Apply-Unify Loop for opencode Code
 `;
 
 // Parse args
@@ -59,17 +59,17 @@ if (hasHelp) {
   console.log(`  ${yellow}Usage:${reset} npx paul-framework [options]
 
   ${yellow}Options:${reset}
-    ${cyan}-g, --global${reset}              Install globally (to Claude config directory)
-    ${cyan}-l, --local${reset}               Install locally (to ./.claude in current directory)
-    ${cyan}-c, --config-dir <path>${reset}   Specify custom Claude config directory
+    ${cyan}-g, --global${reset}              Install globally (to opencode config directory)
+    ${cyan}-l, --local${reset}               Install locally (to ./.opencode in current directory)
+    ${cyan}-c, --config-dir <path>${reset}   Specify custom opencode config directory
     ${cyan}-h, --help${reset}                Show this help message
 
   ${yellow}Examples:${reset}
-    ${dim}# Install to default ~/.claude directory${reset}
+    ${dim}# Install to default ~/.opencode directory${reset}
     npx paul-framework --global
 
     ${dim}# Install to custom config directory${reset}
-    npx paul-framework --global --config-dir ~/.claude-custom
+    npx paul-framework --global --config-dir ~/.opencode-custom
 
     ${dim}# Install to current project only${reset}
     npx paul-framework --local
@@ -106,9 +106,9 @@ function copyWithPathReplacement(srcDir, destDir, pathPrefix) {
     if (entry.isDirectory()) {
       copyWithPathReplacement(srcPath, destPath, pathPrefix);
     } else if (entry.name.endsWith('.md')) {
-      // Replace ~/.claude/ with the appropriate prefix in markdown files
+      // Replace ~/.opencode/ with the appropriate prefix in markdown files
       let content = fs.readFileSync(srcPath, 'utf8');
-      content = content.replace(/~\/\.claude\//g, pathPrefix);
+      content = content.replace(/~\/\.opencode\//g, pathPrefix);
       fs.writeFileSync(destPath, content);
     } else {
       fs.copyFileSync(srcPath, destPath);
@@ -121,25 +121,25 @@ function copyWithPathReplacement(srcDir, destDir, pathPrefix) {
  */
 function install(isGlobal) {
   const src = path.join(__dirname, '..');
-  const configDir = expandTilde(explicitConfigDir) || expandTilde(process.env.CLAUDE_CONFIG_DIR);
-  const defaultGlobalDir = configDir || path.join(os.homedir(), '.claude');
-  const claudeDir = isGlobal
+  const configDir = expandTilde(explicitConfigDir) || expandTilde(process.env.opencode_CONFIG_DIR);
+  const defaultGlobalDir = configDir || path.join(os.homedir(), '.opencode');
+  const opencodeDir = isGlobal
     ? defaultGlobalDir
-    : path.join(process.cwd(), '.claude');
+    : path.join(process.cwd(), '.opencode');
 
   const locationLabel = isGlobal
-    ? claudeDir.replace(os.homedir(), '~')
-    : claudeDir.replace(process.cwd(), '.');
+    ? opencodeDir.replace(os.homedir(), '~')
+    : opencodeDir.replace(process.cwd(), '.');
 
   // Path prefix for file references
   const pathPrefix = isGlobal
-    ? (configDir ? `${claudeDir}/` : '~/.claude/')
-    : './.claude/';
+    ? (configDir ? `${opencodeDir}/` : '~/.opencode/')
+    : './.opencode/';
 
   console.log(`  Installing to ${cyan}${locationLabel}${reset}\n`);
 
   // Create commands directory
-  const commandsDir = path.join(claudeDir, 'commands');
+  const commandsDir = path.join(opencodeDir, 'commands');
   fs.mkdirSync(commandsDir, { recursive: true });
 
   // Copy src/commands to commands/paul
@@ -149,7 +149,7 @@ function install(isGlobal) {
   console.log(`  ${green}✓${reset} Installed commands/paul`);
 
   // Copy src/* (except commands) to paul-framework/
-  const skillDest = path.join(claudeDir, 'paul-framework');
+  const skillDest = path.join(opencodeDir, 'paul-framework');
   fs.mkdirSync(skillDest, { recursive: true });
 
   const srcDirs = ['templates', 'workflows', 'references', 'rules'];
@@ -163,7 +163,7 @@ function install(isGlobal) {
   console.log(`  ${green}✓${reset} Installed paul-framework`);
 
   console.log(`
-  ${green}Done!${reset} Launch Claude Code and run ${cyan}/paul:help${reset}.
+  ${green}Done!${reset} Launch opencode Code and run ${cyan}/paul:help${reset}.
 `);
 }
 
@@ -176,14 +176,14 @@ function promptLocation() {
     output: process.stdout
   });
 
-  const configDir = expandTilde(explicitConfigDir) || expandTilde(process.env.CLAUDE_CONFIG_DIR);
-  const globalPath = configDir || path.join(os.homedir(), '.claude');
+  const configDir = expandTilde(explicitConfigDir) || expandTilde(process.env.OPENCODE_CONFIG_DIR);
+  const globalPath = configDir || path.join(os.homedir(), '.opencode');
   const globalLabel = globalPath.replace(os.homedir(), '~');
 
   console.log(`  ${yellow}Where would you like to install?${reset}
 
   ${cyan}1${reset}) Global ${dim}(${globalLabel})${reset} - available in all projects
-  ${cyan}2${reset}) Local  ${dim}(./.claude)${reset} - this project only
+  ${cyan}2${reset}) Local  ${dim}(./.opencode)${reset} - this project only
 `);
 
   rl.question(`  Choice ${dim}[1]${reset}: `, (answer) => {
