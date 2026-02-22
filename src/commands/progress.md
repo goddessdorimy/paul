@@ -1,5 +1,5 @@
 ---
-name: paul:progress
+name: paul-progress
 description: Smart status with routing - suggests ONE next action
 argument-hint: "[context]"
 allowed-tools: [Read]
@@ -10,7 +10,7 @@ Show current progress and **route to exactly ONE next action**. Prevents decisio
 
 **When to use:**
 - Mid-session check on progress
-- After `/paul:resume` for more context
+- After `/paul-resume` for more context
 - When unsure what to do next
 - To get a tailored suggestion based on your current focus
 </objective>
@@ -69,14 +69,14 @@ Based on state (+ user context if provided), determine **ONE** next action:
 
 | Situation | Single Suggestion |
 |-----------|-------------------|
-| No plan exists | `/paul:plan` |
+| No plan exists | `/paul-plan` |
 | Plan awaiting approval | "Approve plan to proceed" |
-| Plan approved, not executed | `/paul:apply [path]` |
-| Applied, not unified | `/paul:unify [path]` |
-| Loop complete, more phases | `/paul:plan` (next phase) |
+| Plan approved, not executed | `/paul-apply [path]` |
+| Applied, not unified | `/paul-unify [path]` |
+| Loop complete, more phases | `/paul-plan` (next phase) |
 | Milestone complete | "Create next milestone or ship" |
 | Blockers present | "Address blocker: [specific]" |
-| Context at DEEP/CRITICAL | `/paul:pause` |
+| Context at DEEP/CRITICAL | `/paul-pause` |
 
 **With user context:** Adjust suggestion to align with stated intent.
 
@@ -104,7 +104,7 @@ Current Loop: Phase 2, Plan 02-03
 └─────────────────────────────────────┘
 
 ────────────────────────────────────────
-▶ NEXT: /paul:unify .paul/phases/02-features/02-03-PLAN.md
+▶ NEXT: /paul-unify .paul/phases/02-features/02-03-PLAN.md
   Close the loop and update state.
 ────────────────────────────────────────
 
@@ -117,7 +117,7 @@ If context is at DEEP or CRITICAL bracket:
 
 ```
 ⚠️ Context Advisory: Session at [X]% capacity.
-   Recommended: /paul:pause before continuing.
+   Recommended: /paul-pause before continuing.
 ```
 </step>
 
