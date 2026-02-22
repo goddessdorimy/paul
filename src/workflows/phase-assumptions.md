@@ -1,7 +1,7 @@
 <purpose>
-Surface Claude's assumptions about a phase before planning, enabling users to correct misconceptions early.
+Surface opencode's assumptions about a phase before planning, enabling users to correct misconceptions early.
 
-Key insight: This is ANALYSIS of what Claude thinks, not INTAKE of what user knows. No file output - purely conversational to prompt discussion before planning begins.
+Key insight: This is ANALYSIS of what opencode thinks, not INTAKE of what user knows. No file output - purely conversational to prompt discussion before planning begins.
 </purpose>
 
 <process>
@@ -58,31 +58,31 @@ Continue to analyze_phase.
 Based on ROADMAP.md description and PROJECT.md context, surface assumptions:
 
 **1. Technical Approach:**
-What libraries, frameworks, patterns, or tools would Claude use?
+What libraries, frameworks, patterns, or tools would opencode use?
 - "I'd use X library because..."
 - "I'd follow Y pattern because..."
 - "I'd structure this as Z because..."
 
 **2. Implementation Order:**
-What would Claude build first, second, third?
+What would opencode build first, second, third?
 - "I'd start with X because it's foundational"
 - "Then Y because it depends on X"
 - "Finally Z because..."
 
 **3. Scope Boundaries:**
-What's included vs excluded in Claude's interpretation?
+What's included vs excluded in opencode's interpretation?
 - "This phase includes: A, B, C"
 - "This phase does NOT include: D, E, F"
 - "Boundary ambiguities: G could go either way"
 
 **4. Risk Areas:**
-Where does Claude expect complexity or challenges?
+Where does opencode expect complexity or challenges?
 - "The tricky part is X because..."
 - "Potential issues: Y, Z"
 - "I'd watch out for..."
 
 **5. Dependencies:**
-What does Claude assume exists or needs to be in place?
+What does opencode assume exists or needs to be in place?
 - "This assumes X from previous phases"
 - "External dependencies: Y, Z"
 - "This will be consumed by..."
