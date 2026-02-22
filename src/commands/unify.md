@@ -1,5 +1,5 @@
 ---
-name: paul:unify
+name: paul-unify
 description: Reconcile plan vs actual and close the loop
 argument-hint: "[plan-path]"
 allowed-tools: [Read, Write, AskUserQuestion]
@@ -14,8 +14,8 @@ Creates SUMMARY.md documenting what was built, decisions made, and any deferred 
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/unify-phase.md
-@~/.claude/paul-framework/templates/SUMMARY.md
+@~/.opencode/paul-framework/workflows/unify-phase.md
+@~/.opencode/paul-framework/templates/SUMMARY.md
 </execution_context>
 
 <context>
@@ -34,7 +34,7 @@ Plan path: $ARGUMENTS
 </step>
 
 <step name="reconcile">
-Follow workflow: @~/.claude/paul-framework/workflows/unify-phase.md
+Follow workflow: @~/.opencode/paul-framework/workflows/unify-phase.md
 
 Compare plan to actual:
 - Which tasks completed as planned?
