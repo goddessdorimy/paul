@@ -4,22 +4,22 @@
 
 Checkpoints formalize interaction points where human verification or decisions are needed during plan execution. Plans execute autonomously except at checkpoints.
 
-**Core principle:** Claude automates everything with CLI/API. Checkpoints are for verification and decisions, not manual work.
+**Core principle:** opencode automates everything with CLI/API. Checkpoints are for verification and decisions, not manual work.
 
-**Golden rule:** If Claude CAN automate it, Claude MUST automate it.
+**Golden rule:** If opencode CAN automate it, opencode MUST automate it.
 
 ## Checkpoint Types
 
 ### checkpoint:human-verify (90% of checkpoints)
 
-**When:** Claude completed automated work, human confirms it works correctly.
+**When:** opencode completed automated work, human confirms it works correctly.
 
 **Use for:** Visual UI checks, interactive flows, functional verification, audio/video quality, animation smoothness, accessibility testing.
 
 **Structure:**
 ```xml
 <task type="checkpoint:human-verify" gate="blocking">
-  <what-built>[What Claude automated]</what-built>
+  <what-built>[What opencode automated]</what-built>
   <how-to-verify>
     1. [First verification step]
     2. [Second verification step]
@@ -114,10 +114,10 @@ Checkpoints formalize interaction points where human verification or decisions a
 <task type="checkpoint:human-action" gate="blocking">
   <action>[Unavoidable manual step]</action>
   <instructions>
-    [What Claude already automated]
+    [What opencode already automated]
     [The ONE thing requiring human action]
   </instructions>
-  <verification>[What Claude checks afterward]</verification>
+  <verification>[What opencode checks afterward]</verification>
   <resume-signal>Type "done" when complete</resume-signal>
 </task>
 ```
@@ -134,12 +134,12 @@ When executing a plan encounters `type="checkpoint:*"`:
 
 ## Authentication Gates
 
-When Claude tries CLI/API and gets auth error, this is NOT a failure - it's a gate requiring human input to unblock automation.
+When opencode tries CLI/API and gets auth error, this is NOT a failure - it's a gate requiring human input to unblock automation.
 
-**Pattern:** Claude tries automation → auth error → creates dynamic checkpoint → human authenticates → Claude retries → continues
+**Pattern:** opencode tries automation → auth error → creates dynamic checkpoint → human authenticates → opencode retries → continues
 
 **Key distinction:**
-- Pre-planned checkpoint: "I need you to deploy" (WRONG - Claude should automate)
+- Pre-planned checkpoint: "I need you to deploy" (WRONG - opencode should automate)
 - Auth gate: "I tried to deploy but need credentials" (CORRECT - unblocks automation)
 
 ## Guidelines
@@ -152,7 +152,7 @@ When Claude tries CLI/API and gets auth error, this is NOT a failure - it's a ga
 - Make verification executable
 
 **DON'T:**
-- Ask human to do work Claude can automate
+- Ask human to do work opencode can automate
 - Assume knowledge: "Configure the usual settings"
 - Mix multiple verifications in one checkpoint
 - Use checkpoints too frequently (verification fatigue)
@@ -183,7 +183,7 @@ Why bad: Vercel has CLI. Use `vercel --yes`.
 ```
 Why bad: Verification fatigue. Combine into one checkpoint at end.
 
-**GOOD: Claude automates, human verifies once**
+**GOOD: opencode automates, human verifies once**
 ```xml
 <task type="auto">Create schema</task>
 <task type="auto">Create API</task>
@@ -199,13 +199,13 @@ Why bad: Verification fatigue. Combine into one checkpoint at end.
 
 | Type | % Used | Purpose |
 |------|--------|---------|
-| checkpoint:human-verify | 90% | Claude automated, human confirms visual/functional |
+| checkpoint:human-verify | 90% | opencode automated, human confirms visual/functional |
 | checkpoint:decision | 9% | Human makes architectural/technology choice |
 | checkpoint:human-action | 1% | Truly unavoidable manual step (no API/CLI) |
 
 **When NOT to use checkpoints:**
-- Things Claude can verify programmatically (tests, builds)
-- File operations (Claude can read/write)
+- Things opencode can verify programmatically (tests, builds)
+- File operations (opencode can read/write)
 - Anything with CLI/API available
 
 </checkpoints>
