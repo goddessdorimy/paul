@@ -160,7 +160,7 @@ Recommendation: [one-liner]
 Output: [path to DISCOVERY.md or "verbal confirmation"]
 
 ────────────────────────────────────────
-▶ NEXT: /paul:plan [phase]
+▶ NEXT: /paul-plan [phase]
 ────────────────────────────────────────
 ```
 </step>
