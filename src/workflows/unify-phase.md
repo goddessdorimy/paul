@@ -20,9 +20,9 @@ Next phase: PLAN (next plan or next phase)
 </required_reading>
 
 <references>
-@~/.claude/paul-framework/references/loop-phases.md
-@~/.claude/paul-framework/templates/SUMMARY.md
-@~/.claude/paul-framework/workflows/transition-phase.md (loaded when last plan in phase)
+@~/.opencode/paul-framework/references/loop-phases.md
+@~/.opencode/paul-framework/templates/SUMMARY.md
+@~/.opencode/paul-framework/workflows/transition-phase.md (loaded when last plan in phase)
 </references>
 
 <process>
@@ -165,7 +165,7 @@ Continue to next plan?
 ════════════════════════════════════════
 ```
 
-**Accept:** "1", "yes", "continue" → run `/paul:plan` for next plan in same phase
+**Accept:** "1", "yes", "continue" → run `/paul-plan` for next plan in same phase
 </step>
 
 <step name="execute_transition" priority="required" gate="blocking">
@@ -180,7 +180,7 @@ Continue to next plan?
    ════════════════════════════════════════
    ```
 
-2. **MUST read and execute:** @~/.claude/paul-framework/workflows/transition-phase.md
+2. **MUST read and execute:** @~/.opencode/paul-framework/workflows/transition-phase.md
 
 3. Transition handles (do not skip any):
    - Evolve PROJECT.md (requirements validated → shipped)
@@ -191,7 +191,7 @@ Continue to next plan?
 
 4. **Only after transition completes** → offer next phase routing
 
-**Anti-pattern:** Closing UNIFY and immediately offering `/paul:plan` for next phase WITHOUT running transition. This breaks system cohesion and skips git commits.
+**Anti-pattern:** Closing UNIFY and immediately offering `/paul-plan` for next phase WITHOUT running transition. This breaks system cohesion and skips git commits.
 </step>
 
 </process>
