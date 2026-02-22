@@ -2,7 +2,7 @@
 name: paul-unify
 description: Reconcile plan vs actual and close the loop
 argument-hint: "[plan-path]"
-allowed-tools: [Read, Write, AskUserQuestion]
+allowed-tools: [Read, Write, Question]
 ---
 
 <objective>
