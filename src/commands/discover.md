@@ -2,7 +2,7 @@
 name: paul-discover
 description: Research technical options before planning a phase
 argument-hint: "<phase or topic>"
-allowed-tools: [Read, Bash, Glob, Grep, WebSearch, WebFetch, Task, AskUserQuestion]
+allowed-tools: [Read, Bash, Glob, Grep, WebSearch, WebFetch, Task, Question]
 ---
 
 <objective>
