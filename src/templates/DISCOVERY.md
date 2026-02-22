@@ -115,7 +115,7 @@ Or: "None — discovery answered all questions."
 ---
 *Discovery completed: [date]*
 *Confidence: [level]*
-*Ready for: /paul:plan [phase]*
+*Ready for: /paul-plan [phase]*
 ```
 
 ---
