@@ -12,7 +12,7 @@ Add a new phase to the current milestone's roadmap.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/roadmap-management.md
+@~/.opencode/paul-framework/workflows/roadmap-management.md
 </execution_context>
 
 <context>
@@ -24,7 +24,7 @@ $ARGUMENTS
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/roadmap-management.md
+Follow workflow: @~/.opencode/paul-framework/workflows/roadmap-management.md
 
 Execute: **add-phase** operation
 </process>
