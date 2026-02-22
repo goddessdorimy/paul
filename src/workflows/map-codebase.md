@@ -15,7 +15,7 @@ Each agent has fresh context and focuses on specific aspects. Output is concise 
 Include enough detail to be useful as reference. Prioritize practical examples (especially code patterns) over arbitrary brevity. A 200-line TESTING.md with real patterns is more valuable than a 74-line summary.
 
 **Always include file paths:**
-Documents are reference material for Claude when planning/executing. Vague descriptions like "UserService handles users" are not actionable. Always include actual file paths formatted with backticks: `src/services/user.ts`. This allows Claude to navigate directly to relevant code without re-searching. Do NOT include line numbers (they go stale), just file paths.
+Documents are reference material for opencode when planning/executing. Vague descriptions like "UserService handles users" are not actionable. Always include actual file paths formatted with backticks: `src/services/user.ts`. This allows opencode to navigate directly to relevant code without re-searching. Do NOT include line numbers (they go stale), just file paths.
 </philosophy>
 
 <references>
@@ -383,7 +383,7 @@ docs: map existing codebase
 - INTEGRATIONS.md - External services
 - CONCERNS.md - Technical debt and issues
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: opencode <noreply@anthropic.com>
 EOF
 )"
 ```
@@ -428,14 +428,14 @@ Created .paul/codebase/:
 
 **Initialize PAUL project** — use codebase context for planning
 
-`/paul:init`
+`/paul-init`
 
 <sub>`/clear` first → fresh context window</sub>
 
 ---
 
 **Also available:**
-- Re-run mapping: `/paul:map-codebase`
+- Re-run mapping: `/paul-map-codebase`
 - Review specific file: `cat .paul/codebase/STACK.md`
 - Edit any document before proceeding
 
