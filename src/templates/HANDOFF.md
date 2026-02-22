@@ -64,12 +64,12 @@ PLAN ──▶ APPLY ──▶ UNIFY
 1. Read `.paul/STATE.md` for latest position
 2. Check if PLAN exists for current phase
 3. Based on loop position:
-   - `○○○` (fresh) → Run `/paul:plan`
-   - `✓○○` (planned) → Review plan, then `/paul:apply`
-   - `✓✓○` (applied) → Run `/paul:unify`
+   - `○○○` (fresh) → Run `/paul-plan`
+   - `✓○○` (planned) → Review plan, then `/paul-apply`
+   - `✓✓○` (applied) → Run `/paul-unify`
    - `✓✓✓` (complete) → Ready for next phase
 
-**Or simply run:** `/paul:resume`
+**Or simply run:** `/paul-resume`
 
 ---
 
