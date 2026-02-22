@@ -1,7 +1,7 @@
 ---
 name: paul-consider-issues
 description: Review deferred issues with codebase context, triage and route
-allowed-tools: [Read, Bash, Grep, Glob, Edit, AskUserQuestion]
+allowed-tools: [Read, Bash, Grep, Glob, Edit, Question]
 ---
 
 <objective>
