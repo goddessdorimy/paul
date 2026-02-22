@@ -1,8 +1,8 @@
 ---
-name: paul:plan
+name: paul-plan
 description: Enter PLAN phase for current or new plan
 argument-hint: "[phase-plan]"
-allowed-tools: [Read, Write, Glob, AskUserQuestion]
+allowed-tools: [Read, Write, Glob, Question]
 ---
 
 <objective>
@@ -12,9 +12,9 @@ Create or continue a PLAN for the specified phase.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/plan-phase.md
-@~/.claude/paul-framework/templates/PLAN.md
-@~/.claude/paul-framework/references/plan-format.md
+@~/.opencode/paul-framework/workflows/plan-phase.md
+@~/.opencode/paul-framework/templates/PLAN.md
+@~/.opencode/paul-framework/references/plan-format.md
 </execution_context>
 
 <context>
@@ -26,7 +26,7 @@ $ARGUMENTS
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/plan-phase.md
+Follow workflow: @~/.opencode/paul-framework/workflows/plan-phase.md
 </process>
 
 <success_criteria>
