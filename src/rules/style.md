@@ -30,7 +30,7 @@ Exception: SUMMARY.md deviations section, git commits (their purpose IS tracking
 | Type | Convention | Example |
 |------|------------|---------|
 | Files | kebab-case | `plan-phase.md` |
-| Commands | `paul:kebab-case` | `paul:plan` |
+| Commands | `paul-kebab-case` | `paul-plan` |
 | Step names | snake_case | `name="load_project_state"` |
 | Bash variables | CAPS_UNDERSCORES | `PHASE_ARG` |
 | Type attributes | colon separator | `type="checkpoint:human-verify"` |
@@ -120,4 +120,4 @@ Types: `feat`, `fix`, `test`, `refactor`, `docs`, `chore`
 Rules:
 - One commit per task when practical
 - Stage files individually (never `git add .`)
-- Include `Co-Authored-By: Claude` line
+- Include `Co-Authored-By: opencode` line
