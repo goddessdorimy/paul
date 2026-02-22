@@ -23,9 +23,9 @@ Next phase: APPLY (after plan approval)
 </required_reading>
 
 <references>
-@~/.claude/paul-framework/references/plan-format.md
-@~/.claude/paul-framework/references/checkpoints.md (if plan will have checkpoints)
-@~/.claude/paul-framework/templates/PLAN.md
+@~/.opencode/paul-framework/references/plan-format.md
+@~/.opencode/paul-framework/references/checkpoints.md (if plan will have checkpoints)
+@~/.opencode/paul-framework/templates/PLAN.md
 </references>
 
 <process>
@@ -93,7 +93,7 @@ Next phase: APPLY (after plan approval)
    - /skill-1 (work type: X)
    - /skill-2 (work type: Y)
 
-   These must be loaded before /paul:apply will proceed.
+   These must be loaded before /paul-apply will proceed.
    ════════════════════════════════════════
    ```
 
@@ -172,7 +172,7 @@ Required skills will BLOCK apply-phase until confirmed loaded.
 
    Last session: [timestamp]
    Stopped at: Plan [NN-PP] created
-   Next action: Review and approve plan, then run /paul:apply [plan-path]
+   Next action: Review and approve plan, then run /paul-apply [plan-path]
    Resume file: [plan-path]
    ```
 
@@ -196,7 +196,7 @@ Required skills will BLOCK apply-phase until confirmed loaded.
 
    [1] Approved, run APPLY | [2] Questions first | [3] Pause here
    ```
-4. **Accept quick inputs:** "1", "approved", "yes", "go" → run `/paul:apply [plan-path]`
+4. **Accept quick inputs:** "1", "approved", "yes", "go" → run `/paul-apply [plan-path]`
 </step>
 
 </process>
