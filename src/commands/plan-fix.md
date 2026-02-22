@@ -1,21 +1,21 @@
 ---
-name: paul:plan-fix
+name: paul-plan-fix
 description: Plan fixes for UAT issues from verify
 argument-hint: "<plan, e.g., '04-02'>"
-allowed-tools: [Read, Bash, Write, Glob, Grep, AskUserQuestion]
+allowed-tools: [Read, Bash, Write, Glob, Grep, Question]
 ---
 
 <objective>
 Create FIX.md plan from UAT issues found during verify.
 
-**When to use:** After `/paul:verify` logs issues to phase-scoped UAT file.
+**When to use:** After `/paul-verify` logs issues to phase-scoped UAT file.
 
 **Output:** `{plan}-FIX.md` in the phase directory, ready for execution.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/references/plan-format.md
-@~/.claude/paul-framework/references/checkpoints.md
+@~/.opencode/paul-framework/references/plan-format.md
+@~/.opencode/paul-framework/references/checkpoints.md
 </execution_context>
 
 <context>
@@ -37,7 +37,7 @@ If no argument provided:
 ```
 Error: Plan number required.
 
-Usage: /paul:plan-fix 04-02
+Usage: /paul-plan-fix 04-02
 
 This creates a fix plan from .paul/phases/XX-name/{plan}-UAT.md
 ```
@@ -56,7 +56,7 @@ If not found:
 ```
 No UAT.md found for plan {plan}.
 
-UAT.md files are created by /paul:verify when testing finds issues.
+UAT.md files are created by /paul-verify when testing finds issues.
 If no issues were found during testing, no fix plan is needed.
 ```
 Exit.
@@ -169,7 +169,7 @@ Before declaring plan complete:
 
 <success_criteria>
 - All UAT issues from {plan}-UAT.md addressed
-- Ready for re-verification with /paul:verify
+- Ready for re-verification with /paul-verify
 </success_criteria>
 
 <output>
@@ -203,7 +203,7 @@ Continue to APPLY?
 ```
 
 Use AskUserQuestion to get response.
-If approved: `/paul:apply .paul/phases/XX-name/{plan}-FIX.md`
+If approved: `/paul-apply .paul/phases/XX-name/{plan}-FIX.md`
 </step>
 
 </process>
