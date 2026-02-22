@@ -20,8 +20,8 @@ Next phase: UNIFY (after execution completes)
 </required_reading>
 
 <references>
-@~/.claude/paul-framework/references/checkpoints.md (if plan has checkpoints)
-@~/.claude/paul-framework/references/loop-phases.md
+@~/.opencode/paul-framework/references/checkpoints.md (if plan has checkpoints)
+@~/.opencode/paul-framework/references/loop-phases.md
 </references>
 
 <process>
@@ -225,7 +225,7 @@ After all tasks attempted:
 
    [1] Yes, run UNIFY | [2] Pause here
    ```
-4. **Accept quick inputs:** "1", "yes", "continue", "go" → run `/paul:unify [plan-path]`
+4. **Accept quick inputs:** "1", "yes", "continue", "go" → run `/paul-unify [plan-path]`
 </step>
 
 </process>
