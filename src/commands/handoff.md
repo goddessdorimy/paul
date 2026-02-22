@@ -1,5 +1,5 @@
 ---
-name: paul:handoff
+name: paul-handoff
 description: Generate comprehensive session handoff document
 argument-hint: "[context notes]"
 allowed-tools: [Read, Write]
@@ -51,7 +51,7 @@ Session context is primary source - extract:
 </step>
 
 <step name="synthesize">
-Combine Claude's observations with user input:
+Combine opencode's observations with user input:
 
 1. **Session Accomplishments:**
    - What was built/completed
@@ -139,7 +139,7 @@ Create `.paul/HANDOFF-{date}-{context}.md`:
 
 **Current:** {phase, plan, loop position}
 **Next:** {recommended next action}
-**Resume:** `/paul:resume` then read this handoff
+**Resume:** `/paul-resume` then read this handoff
 
 ---
 
@@ -160,7 +160,7 @@ Includes:
 - {N} gaps with your decisions
 - {N} prioritized next actions
 
-Next session: /paul:resume → read handoff
+Next session: /paul-resume → read handoff
 ════════════════════════════════════════
 ```
 </step>
