@@ -1,5 +1,5 @@
 ---
-name: paul:add-phase
+name: paul-add-phase
 description: Add a new phase to current milestone
 argument-hint: "[phase-name]"
 allowed-tools: [Read, Write, Edit, Bash]
