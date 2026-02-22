@@ -69,10 +69,10 @@ if (hasHelp) {
     npx paul-framework --global
 
     ${dim}# Install to custom config directory${reset}
-    npx paul-framework --global --config-dir ~/.opencode-custom
+    npx paulopencode-framework --global --config-dir ~/.opencode-custom
 
     ${dim}# Install to current project only${reset}
-    npx paul-framework --local
+    npx paulopencode-framework --local
 
   ${yellow}What gets installed:${reset}
     commands/paul/     - Slash commands (/paul:init, /paul:plan, etc.)
