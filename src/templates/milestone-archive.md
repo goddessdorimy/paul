@@ -189,14 +189,14 @@ Plans:
 Plans:
 - [x] 08.5-01: SonarQube integration (optional)
 
-### Phase 8.6: Codebase CLAUDE.md [INSERTED]
+### Phase 8.6: Codebase opencode.md [INSERTED]
 
-**Goal:** Project-level Claude Code configuration
+**Goal:** Project-level opencode Code configuration
 **Depends on:** Phase 8.5
 **Reason:** Improve agent context for PAUL projects
 
 Plans:
-- [x] 08.6-01: CLAUDE.md template for codebase guidance
+- [x] 08.6-01: opencode.md template for codebase guidance
 
 ### Phase 8.7: SonarQube Integration [INSERTED]
 
@@ -213,7 +213,7 @@ Plans:
 
 **Decimal Phases:**
 - Phase 8.5: Quality Extensions (inserted after Phase 8 for code quality tooling)
-- Phase 8.6: Codebase CLAUDE.md (inserted after Phase 8.5 for agent context)
+- Phase 8.6: Codebase opencode.md (inserted after Phase 8.5 for agent context)
 - Phase 8.7: SonarQube Integration (inserted after Phase 8.6 for quality checks)
 
 **Key Decisions:**
