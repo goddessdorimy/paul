@@ -1,5 +1,5 @@
 ---
-name: paul:research
+name: paul-research
 description: Research a topic using subagents for discovery
 argument-hint: "<topic> [--codebase | --web]"
 allowed-tools: [Read, Task, Bash, Write]
@@ -18,8 +18,8 @@ Research a specific topic using subagents and save findings for review.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/research.md
-@~/.claude/paul-framework/references/subagent-criteria.md
+@~/.opencode/paul-framework/workflows/research.md
+@~/.opencode/paul-framework/references/subagent-criteria.md
 </execution_context>
 
 <context>
@@ -35,7 +35,7 @@ Optional flags:
 </context>
 
 <process>
-Follow workflow: @~/.claude/paul-framework/workflows/research.md
+Follow workflow: @~/.opencode/paul-framework/workflows/research.md
 </process>
 
 <success_criteria>
