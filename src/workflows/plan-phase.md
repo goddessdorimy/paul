@@ -142,6 +142,17 @@ Required skills will BLOCK apply-phase until confirmed loaded.
    - Not too frequent (avoid checkpoint fatigue)
 </step>
 
+<step name="check_audit_config">
+**Check if enterprise plan audit is enabled for this project.**
+
+1. Check if `.paul/config.md` exists
+2. If exists, read and check for `enterprise_plan_audit:` section with `enabled: true`
+3. Store `audit_enabled` flag (true/false) for use in update_state prompt
+4. If config missing or section missing: `audit_enabled = false`
+
+This flag determines whether the post-plan routing suggests audit before APPLY.
+</step>
+
 <step name="update_state" priority="required">
 **This step is REQUIRED. Do not skip.**
 
@@ -181,6 +192,29 @@ Required skills will BLOCK apply-phase until confirmed loaded.
    - Update phase status: "Not started" → "Planning"
 
 3. **Report with quick continuation prompt:**
+
+   **If `audit_enabled` is true:**
+   ```
+   ════════════════════════════════════════
+   PLAN CREATED
+   ════════════════════════════════════════
+
+   Plan: [plan-path]
+   Phase: [N] — [Phase Name]
+
+   [plan summary - key tasks, checkpoints]
+
+   Enterprise plan audit is enabled for this project.
+
+   ---
+   Next step?
+
+   [1] Run AUDIT (recommended) | [2] Skip audit, run APPLY | [3] Questions first | [4] Pause here
+   ```
+   Accept quick inputs: "1", "audit" → run `/paul:audit [plan-path]`
+   Accept quick inputs: "2", "skip", "apply" → run `/paul:apply [plan-path]`
+
+   **If `audit_enabled` is false (default):**
    ```
    ════════════════════════════════════════
    PLAN CREATED
@@ -196,7 +230,7 @@ Required skills will BLOCK apply-phase until confirmed loaded.
 
    [1] Approved, run APPLY | [2] Questions first | [3] Pause here
    ```
-4. **Accept quick inputs:** "1", "approved", "yes", "go" → run `/paul:apply [plan-path]`
+   Accept quick inputs: "1", "approved", "yes", "go" → run `/paul:apply [plan-path]`
 </step>
 
 </process>

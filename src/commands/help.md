@@ -52,7 +52,7 @@ Every unit of work follows this cycle:
 | Pre-Planning | discuss, assumptions, discover, consider-issues |
 | Research | research, research-phase |
 | Specialized | flows, config, map-codebase |
-| Quality | verify, plan-fix |
+| Quality | verify, plan-fix, audit |
 
 ---
 
@@ -359,6 +359,19 @@ Usage: `/paul:verify`
 
 ---
 
+### `/paul:audit [plan-path]`
+Run enterprise-grade architectural audit on a plan.
+
+- Performs senior engineer + compliance review
+- Auto-applies must-have and strongly-recommended findings to plan
+- Creates AUDIT.md report in phase directory
+- Optional: enabled via `enterprise_plan_audit` in config
+
+Usage: `/paul:audit`
+Usage: `/paul:audit .paul/phases/20-ai-schema/20-01-PLAN.md`
+
+---
+
 ### `/paul:plan-fix`
 Plan fixes for UAT issues from verify.
 
@@ -383,9 +396,11 @@ Usage: `/paul:plan-fix`
 └── phases/
     ├── 01-foundation/
     │   ├── 01-01-PLAN.md
+    │   ├── 01-01-AUDIT.md    (if enterprise audit enabled)
     │   └── 01-01-SUMMARY.md
     └── 02-features/
         ├── 02-01-PLAN.md
+        ├── 02-01-AUDIT.md    (if enterprise audit enabled)
         └── 02-01-SUMMARY.md
 ```
 
@@ -446,6 +461,15 @@ Completion checks
 # Approve plan
 /paul:apply
 /paul:unify
+```
+
+**Enterprise workflow (with audit enabled):**
+```
+/paul:plan        # Create plan
+/paul:audit       # Audit + auto-fix plan
+# Approve audited plan
+/paul:apply       # Execute
+/paul:unify       # Close loop
 ```
 
 **Checking where you are:**

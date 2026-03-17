@@ -47,6 +47,25 @@ sonarqube:
 - `sonar-project.properties` in project root
 - SonarQube MCP server configured
 
+### Enterprise Plan Audit
+
+Architectural review gate between PLAN and APPLY phases.
+
+```yaml
+enterprise_plan_audit:
+  enabled: false
+```
+
+**When enabled:**
+- `/paul:plan` suggests running `/paul:audit` before APPLY
+- `/paul:audit` performs enterprise-grade architectural review
+- Must-have and strongly-recommended findings auto-applied to plan
+- Audit report saved alongside PLAN.md as `{NN}-{PP}-AUDIT.md`
+
+**Requirements:**
+- No external dependencies (runs within Claude Code session)
+- Best suited for commercial, regulated, or enterprise-grade projects
+
 ### Future Integrations
 
 Reserved for future use:
@@ -105,6 +124,13 @@ sonarqube:
   enabled: true
   project_key: expense-tracker
   server_url: http://localhost:9000
+```
+
+### Enterprise Plan Audit
+
+```yaml
+enterprise_plan_audit:
+  enabled: false
 ```
 
 ### Future Integrations

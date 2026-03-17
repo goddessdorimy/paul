@@ -47,8 +47,10 @@ Available integrations:
 
 [1] SonarQube - Code quality scanning
     Status: [enabled/disabled/not configured]
+[2] Enterprise Plan Audit - Architectural review gate
+    Status: [enabled/disabled/not configured]
 
-[2] Done - save and exit
+[3] Done - save and exit
 ```
 
 **If user selects SonarQube:**
@@ -69,6 +71,26 @@ Current: [enabled/disabled/not configured]
 
 **If disabling:**
 - Update config.md with sonarqube.enabled = false
+
+**If user selects Enterprise Plan Audit:**
+
+```
+Enterprise Plan Audit:
+
+Current: [enabled/disabled/not configured]
+
+[1] Enable
+[2] Disable
+[3] Back
+```
+
+**If enabling:**
+- Create/update config.md with enterprise_plan_audit.enabled = true
+- Inform: "After /paul:plan, you'll be prompted to run /paul:audit before APPLY."
+
+**If disabling:**
+- Update config.md with enterprise_plan_audit.enabled = false
+- Inform: "Plans will go directly from PLAN to APPLY without audit suggestion."
 
 **Step 3: Write config**
 
@@ -98,6 +120,13 @@ sonarqube:
   project_key: [key]
 ```
 
+### Enterprise Plan Audit
+
+```yaml
+enterprise_plan_audit:
+  enabled: [true/false]
+```
+
 ## Preferences
 
 ```yaml
@@ -119,6 +148,7 @@ CONFIG UPDATED
 
 Integrations:
   SonarQube: [enabled/disabled]
+  Enterprise Plan Audit: [enabled/disabled]
 
 Config saved to: .paul/config.md
 
@@ -126,6 +156,10 @@ Config saved to: .paul/config.md
 [If SonarQube just enabled:]
 ▶ NEXT: /paul:quality-gate
   Run your first code quality scan.
+
+[If Enterprise Plan Audit just enabled:]
+▶ Enterprise audit will run between PLAN and APPLY.
+  After /paul:plan, you'll be prompted to run /paul:audit.
 
 [Otherwise:]
 Configuration complete.
