@@ -23,6 +23,7 @@ After init, project is ready for first PLAN.
 
 <references>
 @src/templates/config.md
+@src/templates/paul-json.md
 @src/references/sonarqube-integration.md
 </references>
 
@@ -219,6 +220,43 @@ Resume file: .paul/PROJECT.md
 ```
 </step>
 
+<step name="create_paul_json">
+**Create satellite manifest for external system discovery.**
+
+Reference: @src/templates/paul-json.md
+
+Create `.paul/paul.json`:
+```json
+{
+  "name": "[project_name]",
+  "version": "0.0.0",
+  "milestone": {
+    "name": "None",
+    "version": "0.0.0",
+    "status": "not_started"
+  },
+  "phase": {
+    "number": 0,
+    "name": "None",
+    "status": "not_started"
+  },
+  "loop": {
+    "plan": null,
+    "position": "IDLE"
+  },
+  "timestamps": {
+    "created_at": "[ISO timestamp]",
+    "updated_at": "[ISO timestamp]"
+  },
+  "satellite": {
+    "groom": true
+  }
+}
+```
+
+**Note:** paul.json is infrastructure — no extra display or user prompts needed.
+</step>
+
 <step name="prompt_integrations">
 **Ask about optional integrations:**
 
@@ -286,8 +324,87 @@ Wait for user response.
 
 **If "2" or "skip" or "no":**
 
+Store `sonarqube_enabled = false`
+(Don't create config.md yet - check enterprise audit next)
+</step>
+
+<step name="prompt_enterprise_audit">
+**Ask about enterprise plan audit:**
+
+```
+Is this a commercial/enterprise project that needs architectural plan auditing?
+(Adds enterprise-grade review step between PLAN and APPLY)
+
+[1] Yes, enable enterprise plan audit
+[2] Skip for now
+```
+
+Wait for user response.
+
+**If "1" or "yes" or "enable":**
+
+Store `enterprise_audit_enabled = true`
+
+**If "2" or "skip" or "no":**
+
+Store `enterprise_audit_enabled = false`
+</step>
+
+<step name="create_config_if_needed">
+**Create config.md if any integration was enabled.**
+
+If `sonarqube_enabled` OR `enterprise_audit_enabled`:
+
+Create `.paul/config.md`:
+```markdown
+# Project Config
+
+**Project:** [project_name]
+**Created:** [timestamp]
+
+## Project Settings
+
+```yaml
+project:
+  name: [project_name]
+  version: 0.0.0
+```
+
+## Integrations
+
+### SonarQube
+
+```yaml
+sonarqube:
+  enabled: [true/false based on sonarqube_enabled]
+  project_key: [project_key if enabled]
+```
+
+### Enterprise Plan Audit
+
+```yaml
+enterprise_plan_audit:
+  enabled: [true/false based on enterprise_audit_enabled]
+```
+
+## Preferences
+
+```yaml
+preferences:
+  auto_commit: false
+  verbose_output: false
+```
+
+---
+*Config created: [timestamp]*
+```
+
+Store `integrations_enabled = true`
+
+**If neither was enabled:**
+
 Store `integrations_enabled = false`
-(Don't create config.md - user can add later)
+(Don't create config.md - user can add later via /paul:config)
 </step>
 
 <step name="check_specialized_flows">
@@ -333,7 +450,8 @@ Created:
   .paul/PROJECT.md    ✓
   .paul/ROADMAP.md    ✓
   .paul/STATE.md      ✓
-  .paul/config.md     ✓  (if integrations_enabled: "SonarQube enabled")
+  .paul/paul.json     ✓
+  .paul/config.md     ✓  (if integrations_enabled: list enabled integrations)
   .paul/SPECIAL-FLOWS.md  ✓  (if specialized_flows_enabled: "[N] skills configured")
   .paul/phases/       ✓
 
@@ -348,6 +466,11 @@ Type "yes" to proceed, or ask questions first.
 **Note:** Only show config.md and SPECIAL-FLOWS.md lines if those features were enabled.
 If neither was enabled, show the minimal version without those lines.
 
+**Config line detail:** When showing config.md, list what's enabled:
+- If sonarqube_enabled: include "SonarQube"
+- If enterprise_audit_enabled: include "Enterprise Plan Audit"
+- Example: `.paul/config.md ✓ (SonarQube, Enterprise Plan Audit enabled)`
+
 **Do NOT suggest multiple next steps.** ONE action only.
 </step>
 
@@ -358,6 +481,7 @@ If neither was enabled, show the minimal version without those lines.
 - `.paul/PROJECT.md` (populated from conversation)
 - `.paul/ROADMAP.md` (skeleton for planning)
 - `.paul/STATE.md` (initialized state)
+- `.paul/paul.json` (satellite manifest for external system discovery)
 - `.paul/config.md` (if integrations enabled)
 - `.paul/SPECIAL-FLOWS.md` (if specialized flows enabled)
 - `.paul/phases/` (empty directory)

@@ -133,6 +133,24 @@ Next phase: PLAN (next plan or next phase)
    - Update resume file (point to SUMMARY)
 </step>
 
+<step name="sync_paul_json">
+**Sync satellite manifest (paul.json):**
+
+1. Check if `.paul/paul.json` exists:
+   ```bash
+   ls .paul/paul.json 2>/dev/null
+   ```
+2. If not found: skip silently (pre-v1.1 project)
+3. If found: read current paul.json and update:
+   - `phase.number` → current phase number from STATE.md
+   - `phase.name` → current phase name from STATE.md
+   - `phase.status` → "complete" if phase done, "in_progress" if more plans remain
+   - `loop.plan` → null (loop just closed)
+   - `loop.position` → "IDLE"
+   - `timestamps.updated_at` → current ISO timestamp
+4. Write updated paul.json back
+</step>
+
 <step name="check_phase_completion">
 **Determine if this is the last plan in the phase:**
 
