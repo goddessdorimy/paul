@@ -75,7 +75,7 @@ if (hasHelp) {
     npx paul-framework --local
 
   ${yellow}What gets installed:${reset}
-    commands/paul/     - Slash commands (/paul:init, /paul:plan, etc.)
+    commands/paul/     - Slash commands (/paul-init, /paul-plan, etc.)
     paul-framework/    - Templates, workflows, references, rules
 `);
   process.exit(0);
@@ -163,7 +163,7 @@ function install(isGlobal) {
   console.log(`  ${green}✓${reset} Installed paul-framework`);
 
   console.log(`
-  ${green}Done!${reset} Launch opencode Code and run ${cyan}/paul:help${reset}.
+  ${green}Done!${reset} Launch opencode Code and run ${cyan}/paul-help${reset}.
 `);
 }
 
