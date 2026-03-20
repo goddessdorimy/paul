@@ -166,6 +166,28 @@ Update STATE.md:
    ```
 </step>
 
+<step name="sync_paul_json">
+**Sync satellite manifest (paul.json):**
+
+1. Check if `.paul/paul.json` exists:
+   ```bash
+   ls .paul/paul.json 2>/dev/null
+   ```
+2. If not found: skip silently (pre-v1.1 project)
+3. If found: read current paul.json and update:
+   - `milestone.name` → new milestone name
+   - `milestone.version` → new milestone version
+   - `milestone.status` → "in_progress"
+   - `version` → new milestone version string
+   - `phase.number` → first phase number
+   - `phase.name` → first phase name
+   - `phase.status` → "not_started"
+   - `loop.plan` → null
+   - `loop.position` → "IDLE"
+   - `timestamps.updated_at` → current ISO timestamp
+4. Write updated paul.json back
+</step>
+
 <step name="cleanup_context">
 **If MILESTONE-CONTEXT.md existed:**
 

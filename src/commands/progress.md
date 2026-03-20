@@ -35,6 +35,11 @@ Read `.paul/STATE.md` and `.paul/ROADMAP.md`:
 - Roadmap progress
 - Performance metrics (if tracked)
 - Blockers or concerns
+
+Also check `.paul/config.md` (if exists):
+- Is `enterprise_plan_audit: enabled: true`?
+- If plan is at "created, awaiting approval" stage: check if STATE.md mentions "audited"
+- Store `audit_enabled` and `audit_completed` flags for routing
 </step>
 
 <step name="calculate_progress">
@@ -69,11 +74,20 @@ Based on state (+ user context if provided), determine **ONE** next action:
 
 | Situation | Single Suggestion |
 |-----------|-------------------|
+<<<<<<< HEAD
 | No plan exists | `/paul-plan` |
 | Plan awaiting approval | "Approve plan to proceed" |
 | Plan approved, not executed | `/paul-apply [path]` |
 | Applied, not unified | `/paul-unify [path]` |
 | Loop complete, more phases | `/paul-plan` (next phase) |
+=======
+| No plan exists | `/paul:plan` |
+| Plan awaiting approval (audit enabled, not yet audited) | `/paul:audit [path]` |
+| Plan awaiting approval (audit complete or not enabled) | "Approve plan to proceed" |
+| Plan approved, not executed | `/paul:apply [path]` |
+| Applied, not unified | `/paul:unify [path]` |
+| Loop complete, more phases | `/paul:plan` (next phase) |
+>>>>>>> upstream/main
 | Milestone complete | "Create next milestone or ship" |
 | Blockers present | "Address blocker: [specific]" |
 | Context at DEEP/CRITICAL | `/paul-pause` |
