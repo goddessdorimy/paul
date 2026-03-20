@@ -1,10 +1,14 @@
 import os
+import re
 
 # CONFIGURACIÓN: 'PalabraOriginal': 'TuPalabra'
 REEMPLAZOS = {
-    'NomenclaturaVieja': 'NomenclaturaNueva',
-    'OldProjectName': 'MyCustomProject',
-    'api_endpoint_v1': 'mi_api_v2'
+    'nomenclaturavieja': 'NomenclaturaNueva',
+    'oldprojectname': 'MyCustomProject',
+    '.claude': '.opencode',
+    'claude code': 'opencode',
+    'claude': 'opencode',
+    'AskUserQuestion': 'Question'
 }
 
 def ejecutar_reemplazo():
@@ -16,10 +20,16 @@ def ejecutar_reemplazo():
             try:
                 with open(path, 'r', encoding='utf-8') as f:
                     data = f.read()
+                
+                nuevo_contenido = data
                 for viejo, nuevo in REEMPLAZOS.items():
-                    data = data.replace(viejo, nuevo)
-                with open(path, 'w', encoding='utf-8') as f:
-                    f.write(data)
+                    # El flag re.IGNORECASE hace la magia
+                    insensible = re.compile(re.escape(viejo), re.IGNORECASE)
+                    nuevo_contenido = insensible.sub(nuevo, nuevo_contenido)
+                
+                if nuevo_contenido != data:
+                    with open(path, 'w', encoding='utf-8') as f:
+                        f.write(nuevo_contenido)
             except: pass
 
 if __name__ == "__main__":
