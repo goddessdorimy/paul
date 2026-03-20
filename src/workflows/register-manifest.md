@@ -15,7 +15,7 @@ Generate .paul/paul.json for an existing PAUL project that predates v1.1. Reads 
    ```bash
    ls .paul/ 2>/dev/null
    ```
-   If missing: "No .paul/ directory found. Run /paul:init first."
+   If missing: "No .paul/ directory found. Run /paul-init first."
    Stop.
 
 2. Check paul.json doesn't already exist:
