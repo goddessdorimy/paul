@@ -1,5 +1,5 @@
 ---
-name: paul:audit
+name: paul-audit
 description: Run enterprise-grade architectural audit on current plan
 argument-hint: "[plan-path]"
 allowed-tools: [Read, Write, Edit, Glob, Question]
