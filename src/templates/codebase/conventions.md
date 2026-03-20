@@ -2,7 +2,7 @@
 
 Template for `.paul/codebase/CONVENTIONS.md` - captures coding style and patterns.
 
-**Purpose:** Document how code is written in this codebase. Prescriptive guide for Claude to match existing style.
+**Purpose:** Document how code is written in this codebase. Prescriptive guide for opencode to match existing style.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
 name: paul-assumptions
-description: Surface Claude's assumptions about a phase before planning
+description: Surface opencode's assumptions about a phase before planning
 argument-hint: "<phase-number>"
 allowed-tools: [Read, Bash]
 ---
 
 <objective>
-Surface Claude's assumptions about a phase to validate understanding before planning.
+Surface opencode's assumptions about a phase to validate understanding before planning.
 
 **When to use:** Before planning to catch misconceptions early.
 

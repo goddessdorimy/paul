@@ -202,7 +202,7 @@ Continue to APPLY?
 ────────────────────────────────────────
 ```
 
-Use AskUserQuestion to get response.
+Use Question to get response.
 If approved: `/paul-apply .paul/phases/XX-name/{plan}-FIX.md`
 </step>
 

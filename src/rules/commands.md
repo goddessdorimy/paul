@@ -73,7 +73,7 @@ Use checkbox format. Each criterion must be objectively verifiable.
 name: paul-plan
 description: Enter PLAN phase for current or new plan
 argument-hint: "[phase-plan]"
-allowed-tools: [Read, Write, Glob, AskUserQuestion]
+allowed-tools: [Read, Write, Glob, Question]
 ---
 
 <objective>

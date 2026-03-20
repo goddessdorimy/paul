@@ -1,7 +1,7 @@
 {
   "name": "paul-framework",
   "version": "1.1.1",
-  "description": "Plan-Apply-Unify Loop - A structured AI-assisted development framework for Claude Code",
+  "description": "Plan-Apply-Unify Loop - A structured AI-assisted development framework for opencode",
   "bin": {
     "paul-framework": "bin/install.js"
   },
@@ -14,8 +14,8 @@
     "src/rules"
   ],
   "keywords": [
-    "claude",
-    "claude-code",
+    "opencode",
+    "opencode-code",
     "ai",
     "planning",
     "structured-development",

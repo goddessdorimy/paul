@@ -92,27 +92,27 @@ Proceed to `symptom_gathering`.
 CRITICAL: Update the debug file after each piece of information gathered.
 
 **1. Expected behavior:**
-Use AskUserQuestion: "What should happen?"
+Use Question: "What should happen?"
 After answer → Update Symptoms.expected
 
 **2. Actual behavior:**
-Use AskUserQuestion: "What actually happens instead?"
+Use Question: "What actually happens instead?"
 After answer → Update Symptoms.actual
 
 **3. Error messages:**
-Use AskUserQuestion: "Any error messages?"
+Use Question: "Any error messages?"
 After answer → Update Symptoms.errors
 
 **4. When it started:**
-Use AskUserQuestion: "When did this start?"
+Use Question: "When did this start?"
 After answer → Update Symptoms.started
 
 **5. Reproduction:**
-Use AskUserQuestion: "How do you trigger this?"
+Use Question: "How do you trigger this?"
 After answer → Update Symptoms.reproduction
 
 **6. Ready check:**
-Use AskUserQuestion: "Enough context to investigate?"
+Use Question: "Enough context to investigate?"
 - If "Start investigating" → Update status to "investigating", proceed to `investigation_loop`
 - If "I have more context" → receive it, update relevant field, ask again
 </step>

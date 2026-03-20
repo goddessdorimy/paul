@@ -243,7 +243,7 @@ Template for `.paul/codebase/ARCHITECTURE.md` - captures conceptual code organiz
 - Implementation details of specific features
 
 **File paths ARE welcome:**
-Include file paths as concrete examples of abstractions. Use backtick formatting: `src/services/user.ts`. This makes the architecture document actionable for Claude when planning.
+Include file paths as concrete examples of abstractions. Use backtick formatting: `src/services/user.ts`. This makes the architecture document actionable for opencode when planning.
 
 **When filling this template:**
 - Read main entry points (index, server, main)

@@ -34,7 +34,7 @@ The workflow implements:
 1. Identify test scope (specified or most recent SUMMARY)
 2. Extract testable deliverables from SUMMARY.md
 3. Generate test checklist based on acceptance criteria
-4. Guide user through each test via AskUserQuestion
+4. Guide user through each test via Question
 5. Collect and categorize any issues found
 6. Log issues to phase-scoped UAT file
 7. Present summary with verdict

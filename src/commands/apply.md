@@ -2,7 +2,7 @@
 name: paul-apply
 description: Execute an approved PLAN
 argument-hint: "[plan-path]"
-allowed-tools: [Read, Write, Edit, Bash, Glob, Grep, AskUserQuestion]
+allowed-tools: [Read, Write, Edit, Bash, Glob, Grep, Question]
 ---
 
 <objective>

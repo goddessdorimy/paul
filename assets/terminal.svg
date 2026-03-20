@@ -50,7 +50,7 @@
 
     <!-- Title and subtitle -->
     <text class="text white" font-size="15" y="188">  PAUL Framework <tspan class="dim">v0.1.0</tspan></text>
-    <text class="text white" font-size="15" y="212">  Plan-Apply-Unify Loop for Claude Code</text>
+    <text class="text white" font-size="15" y="212">  Plan-Apply-Unify Loop for opencode</text>
 
     <!-- Install output -->
     <text class="text" font-size="15" y="260"><tspan class="green">  ✓</tspan><tspan class="white"> Installed commands/paul</tspan></text>

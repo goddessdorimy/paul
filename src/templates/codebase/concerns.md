@@ -322,7 +322,7 @@ Template for `.paul/codebase/CONCERNS.md` - captures known issues and areas requ
 - Estimating risk of changes
 - Understanding where to be careful
 - Prioritizing improvements
-- Onboarding new Claude contexts
+- Onboarding new opencode contexts
 - Planning refactoring work
 
 **How this gets populated:**

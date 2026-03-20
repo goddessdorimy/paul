@@ -90,7 +90,7 @@ Present this checklist to user.
 <step name="guide">
 **Guide user through each test:**
 
-For each test item, use AskUserQuestion:
+For each test item, use Question:
 - header: "[AC-N or Feature name]"
 - question: "[Test description] - Did this work as expected?"
 - options:
@@ -102,7 +102,7 @@ For each test item, use AskUserQuestion:
 **If Pass:** Move to next test
 
 **If Fail or Partial:**
-Follow up with AskUserQuestion:
+Follow up with Question:
 - header: "Issue details"
 - question: "What went wrong?"
 - options:
@@ -182,7 +182,7 @@ If any issues found:
 <step name="offer">
 **Offer next actions based on results:**
 
-Use AskUserQuestion:
+Use Question:
 - header: "Next"
 - question: "What would you like to do?"
 - options (based on results):
@@ -203,7 +203,7 @@ If issues found:
 <success_criteria>
 - [ ] Test scope identified from SUMMARY.md
 - [ ] Checklist generated based on acceptance criteria
-- [ ] User guided through each test via AskUserQuestion
+- [ ] User guided through each test via Question
 - [ ] All test results captured (pass/fail/partial/skip)
 - [ ] Any issues logged to phase-scoped UAT file
 - [ ] Summary presented with verdict

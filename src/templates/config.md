@@ -63,7 +63,7 @@ enterprise_plan_audit:
 - Audit report saved alongside PLAN.md as `{NN}-{PP}-AUDIT.md`
 
 **Requirements:**
-- No external dependencies (runs within Claude Code session)
+- No external dependencies (runs within opencode session)
 - Best suited for commercial, regulated, or enterprise-grade projects
 
 ### Future Integrations

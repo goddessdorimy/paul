@@ -2,7 +2,7 @@
 name: paul:audit
 description: Run enterprise-grade architectural audit on current plan
 argument-hint: "[plan-path]"
-allowed-tools: [Read, Write, Edit, Glob, AskUserQuestion]
+allowed-tools: [Read, Write, Edit, Glob, Question]
 ---
 
 <objective>
@@ -12,11 +12,11 @@ Produces an AUDIT.md report in the same phase directory.
 
 **When to use:** After PLAN phase complete, before APPLY.
 **Optional:** Only runs when explicitly invoked or suggested by `enterprise_plan_audit` config.
-**Who audits:** Claude performs the audit assuming the role of senior principal engineer + compliance reviewer.
+**Who audits:** opencode performs the audit assuming the role of senior principal engineer + compliance reviewer.
 </objective>
 
 <execution_context>
-@~/.claude/paul-framework/workflows/audit-plan.md
+@~/.opencode/paul-framework/workflows/audit-plan.md
 </execution_context>
 
 <context>
@@ -27,7 +27,7 @@ Plan path: $ARGUMENTS
 </context>
 
 <process>
-**Follow workflow: @~/.claude/paul-framework/workflows/audit-plan.md**
+**Follow workflow: @~/.opencode/paul-framework/workflows/audit-plan.md**
 
 The workflow implements:
 1. Validate preconditions (PLAN exists, loop at PLAN complete)

@@ -126,7 +126,7 @@ Build consolidated list with source file reference.
 <step name="offer_actions">
 **Offer actions based on findings:**
 
-Use AskUserQuestion with relevant options:
+Use Question with relevant options:
 
 **If resolved issues exist:**
 - "Close resolved" - Move to closed section

@@ -147,7 +147,7 @@ paul-framework/
 - Subdirectories: None
 
 **src/commands/**
-- Purpose: Slash command definitions for Claude Code
+- Purpose: Slash command definitions for opencode
 - Contains: *.md files (one per command)
 - Key files: init.md, plan.md, apply.md, unify.md
 - Subdirectories: None (flat structure)
@@ -187,14 +187,14 @@ paul-framework/
 
 **Documentation:**
 - `README.md` - User-facing installation and usage guide
-- `CLAUDE.md` - Instructions for Claude Code when working in this repo
+- `opencode.md` - Instructions for opencode when working in this repo
 
 ## Naming Conventions
 
 **Files:**
 - kebab-case.md: Markdown documents
 - kebab-case.js: JavaScript source files
-- UPPERCASE.md: Important project files (README, CLAUDE, CHANGELOG)
+- UPPERCASE.md: Important project files (README, opencode, CHANGELOG)
 
 **Directories:**
 - kebab-case: All directories
@@ -230,7 +230,7 @@ paul-framework/
 ## Special Directories
 
 **src/**
-- Purpose: Resources installed to ~/.claude/paul-framework/
+- Purpose: Resources installed to ~/.opencode/paul-framework/
 - Source: Copied by bin/install.js during installation
 - Committed: Yes (source of truth)
 
