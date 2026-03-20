@@ -211,8 +211,8 @@ This flag determines whether the post-plan routing suggests audit before APPLY.
 
    [1] Run AUDIT (recommended) | [2] Skip audit, run APPLY | [3] Questions first | [4] Pause here
    ```
-   Accept quick inputs: "1", "audit" → run `/paul:audit [plan-path]`
-   Accept quick inputs: "2", "skip", "apply" → run `/paul:apply [plan-path]`
+   Accept quick inputs: "1", "audit" → run `/paul-audit [plan-path]`
+   Accept quick inputs: "2", "skip", "apply" → run `/paul-apply [plan-path]`
 
    **If `audit_enabled` is false (default):**
    ```
@@ -233,7 +233,7 @@ This flag determines whether the post-plan routing suggests audit before APPLY.
 <<<<<<< HEAD
 4. **Accept quick inputs:** "1", "approved", "yes", "go" → run `/paul-apply [plan-path]`
 =======
-   Accept quick inputs: "1", "approved", "yes", "go" → run `/paul:apply [plan-path]`
+   Accept quick inputs: "1", "approved", "yes", "go" → run `/paul-apply [plan-path]`
 >>>>>>> upstream/main
 </step>
 
