@@ -86,7 +86,7 @@ Current: [enabled/disabled/not configured]
 
 **If enabling:**
 - Create/update config.md with enterprise_plan_audit.enabled = true
-- Inform: "After /paul:plan, you'll be prompted to run /paul:audit before APPLY."
+- Inform: "After /paul-plan, you'll be prompted to run /paul-audit before APPLY."
 
 **If disabling:**
 - Update config.md with enterprise_plan_audit.enabled = false
@@ -159,7 +159,7 @@ Config saved to: .paul/config.md
 
 [If Enterprise Plan Audit just enabled:]
 ▶ Enterprise audit will run between PLAN and APPLY.
-  After /paul:plan, you'll be prompted to run /paul:audit.
+  After /paul-plan, you'll be prompted to run /paul-audit.
 
 [Otherwise:]
 Configuration complete.
