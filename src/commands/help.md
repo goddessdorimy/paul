@@ -362,7 +362,7 @@ Usage: `/paul-verify`
 <<<<<<< HEAD
 ### `/paul-plan-fix`
 =======
-### `/paul:audit [plan-path]`
+### `/paul-audit [plan-path]`
 Run enterprise-grade architectural audit on a plan.
 
 - Performs senior engineer + compliance review
@@ -370,12 +370,12 @@ Run enterprise-grade architectural audit on a plan.
 - Creates AUDIT.md report in phase directory
 - Optional: enabled via `enterprise_plan_audit` in config
 
-Usage: `/paul:audit`
-Usage: `/paul:audit .paul/phases/20-ai-schema/20-01-PLAN.md`
+Usage: `/paul-audit`
+Usage: `/paul-audit .paul/phases/20-ai-schema/20-01-PLAN.md`
 
 ---
 
-### `/paul:plan-fix`
+### `/paul-plan-fix`
 >>>>>>> upstream/main
 Plan fixes for UAT issues from verify.
 
@@ -469,11 +469,11 @@ Completion checks
 
 **Enterprise workflow (with audit enabled):**
 ```
-/paul:plan        # Create plan
-/paul:audit       # Audit + auto-fix plan
+/paul-plan        # Create plan
+/paul-audit       # Audit + auto-fix plan
 # Approve audited plan
-/paul:apply       # Execute
-/paul:unify       # Close loop
+/paul-apply       # Execute
+/paul-unify       # Close loop
 ```
 
 **Checking where you are:**
