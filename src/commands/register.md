@@ -1,5 +1,5 @@
 ---
-name: paul:register
+name: paul-register
 description: Generate paul.json for an existing PAUL project that predates v1.1 satellite manifest support
 argument-hint:
 allowed-tools: [Read, Write, Bash]
