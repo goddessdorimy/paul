@@ -26,7 +26,8 @@ jobs:
           git fetch upstream
           # Forzamos que tu rama local sea igual a la del autor original
           # CUIDADO: Esto igualará tu código al del autor antes de transformar
-          git reset --hard upstream/main 
+          git merge upstream/main --allow-unrelated-histories -m "Sincronizar con original" || echo "Sin cambios"
+          git checkout HEAD transformar.py 
 
       - name: Ejecutar transformación de palabras
         run: python transformar.py
