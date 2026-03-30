@@ -8,11 +8,11 @@ allowed-tools: [Read, Write, Bash]
 <objective>
 Generate `.paul/paul.json` for an existing project that has a `.paul/` directory but no satellite manifest.
 
-**When to use:** Projects initialized before paul-framework v1.1 that are missing `paul.json`. Required for BASE satellite auto-detection to discover and register the project.
+**When to use:** Projects initialized before paul-framework-opencode v1.1 that are missing `paul.json`. Required for BASE satellite auto-detection to discover and register the project.
 </objective>
 
 <execution_context>
-@~/.opencode/paul-framework/workflows/register-manifest.md
+@~/.opencode/paul-framework-opencode/workflows/register-manifest.md
 </execution_context>
 
 <context>
@@ -20,7 +20,7 @@ Current directory (check for .paul/ and existing paul.json)
 </context>
 
 <process>
-Follow workflow: @~/.opencode/paul-framework/workflows/register-manifest.md
+Follow workflow: @~/.opencode/paul-framework-opencode/workflows/register-manifest.md
 </process>
 
 <success_criteria>

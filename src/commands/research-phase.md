@@ -18,8 +18,8 @@ Analyze a phase for unknowns and research them using subagents.
 </objective>
 
 <execution_context>
-@~/.opencode/paul-framework/workflows/research.md
-@~/.opencode/paul-framework/references/subagent-criteria.md
+@~/.opencode/paul-framework-opencode/workflows/research.md
+@~/.opencode/paul-framework-opencode/references/subagent-criteria.md
 </execution_context>
 
 <context>

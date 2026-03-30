@@ -228,7 +228,7 @@ SEED produces a PLANNING.md that PAUL can consume directly.
 Wait for user response.
 
 **If "1" or "install":**
-1. Run: `npx paul-framework add-skill seed` (or applicable install command)
+1. Run: `npx paul-framework-opencode add-skill seed` (or applicable install command)
 2. Display: "SEED installed. Starting ideation with your project context..."
 3. Hand off to `/seed` — pass project_name, description, core_value, project_type, and any gathered requirements as context
 4. Exit init workflow (SEED will handle the rest; user returns via `/seed launch`)

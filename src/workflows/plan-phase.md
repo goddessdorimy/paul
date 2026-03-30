@@ -23,9 +23,9 @@ Next phase: APPLY (after plan approval)
 </required_reading>
 
 <references>
-@~/.opencode/paul-framework/references/plan-format.md
-@~/.opencode/paul-framework/references/checkpoints.md (if plan will have checkpoints)
-@~/.opencode/paul-framework/templates/PLAN.md
+@~/.opencode/paul-framework-opencode/references/plan-format.md
+@~/.opencode/paul-framework-opencode/references/checkpoints.md (if plan will have checkpoints)
+@~/.opencode/paul-framework-opencode/templates/PLAN.md
 </references>
 
 <process>

@@ -26,8 +26,8 @@ No multiple options. Prevents decision fatigue. User can redirect if needed.
 </required_reading>
 
 <references>
-@~/.opencode/paul-framework/references/context-management.md
-@~/.opencode/paul-framework/references/loop-phases.md
+@~/.opencode/paul-framework-opencode/references/context-management.md
+@~/.opencode/paul-framework-opencode/references/loop-phases.md
 </references>
 
 <process>

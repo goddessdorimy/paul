@@ -14,8 +14,8 @@ Execute discovery to inform planning decisions. Produces DISCOVERY.md with findi
 </objective>
 
 <execution_context>
-@~/.opencode/paul-framework/workflows/discovery.md
-@~/.opencode/paul-framework/templates/DISCOVERY.md
+@~/.opencode/paul-framework-opencode/workflows/discovery.md
+@~/.opencode/paul-framework-opencode/templates/DISCOVERY.md
 </execution_context>
 
 <context>
@@ -26,7 +26,7 @@ $ARGUMENTS (phase number or topic)
 </context>
 
 <process>
-**Follow workflow: @~/.opencode/paul-framework/workflows/discovery.md**
+**Follow workflow: @~/.opencode/paul-framework-opencode/workflows/discovery.md**
 
 The workflow implements:
 1. Determine depth level (quick/standard/deep)

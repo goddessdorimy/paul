@@ -14,8 +14,8 @@ Create FIX.md plan from UAT issues found during verify.
 </objective>
 
 <execution_context>
-@~/.opencode/paul-framework/references/plan-format.md
-@~/.opencode/paul-framework/references/checkpoints.md
+@~/.opencode/paul-framework-opencode/references/plan-format.md
+@~/.opencode/paul-framework-opencode/references/checkpoints.md
 </execution_context>
 
 <context>

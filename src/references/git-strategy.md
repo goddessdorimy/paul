@@ -153,7 +153,7 @@ a1b2c3 feat(08.5-01): create git-strategy.md
 7k8l9m feat(07-01): add session continuity to STATE.md
 
 # Initialization
-0n1o2p docs: initialize paul-framework (8 phases)
+0n1o2p docs: initialize paul-framework-opencode (8 phases)
 ```
 
 Each plan produces 2-4 commits (tasks + metadata). Clear, granular, bisectable.

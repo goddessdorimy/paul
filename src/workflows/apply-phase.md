@@ -21,12 +21,12 @@ Next phase: UNIFY (after execution completes)
 
 <references>
 <<<<<<< HEAD
-@~/.opencode/paul-framework/references/checkpoints.md (if plan has checkpoints)
-@~/.opencode/paul-framework/references/loop-phases.md
+@~/.opencode/paul-framework-opencode/references/checkpoints.md (if plan has checkpoints)
+@~/.opencode/paul-framework-opencode/references/loop-phases.md
 =======
-@~/.opencode/paul-framework/references/checkpoints.md (if plan has checkpoints)
-@~/.opencode/paul-framework/references/loop-phases.md
-@~/.opencode/paul-framework/references/quality-principles.md
+@~/.opencode/paul-framework-opencode/references/checkpoints.md (if plan has checkpoints)
+@~/.opencode/paul-framework-opencode/references/loop-phases.md
+@~/.opencode/paul-framework-opencode/references/quality-principles.md
 >>>>>>> upstream/main
 </references>
 

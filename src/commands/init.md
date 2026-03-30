@@ -14,10 +14,10 @@ Creates PROJECT.md, STATE.md, and ROADMAP.md populated from conversation - user 
 </objective>
 
 <execution_context>
-@~/.opencode/paul-framework/workflows/init-project.md
-@~/.opencode/paul-framework/templates/PROJECT.md
-@~/.opencode/paul-framework/templates/STATE.md
-@~/.opencode/paul-framework/templates/ROADMAP.md
+@~/.opencode/paul-framework-opencode/workflows/init-project.md
+@~/.opencode/paul-framework-opencode/templates/PROJECT.md
+@~/.opencode/paul-framework-opencode/templates/STATE.md
+@~/.opencode/paul-framework-opencode/templates/ROADMAP.md
 </execution_context>
 
 <context>
@@ -25,7 +25,7 @@ Current directory state (check for existing .paul/)
 </context>
 
 <process>
-**Follow workflow: @~/.opencode/paul-framework/workflows/init-project.md**
+**Follow workflow: @~/.opencode/paul-framework-opencode/workflows/init-project.md**
 
 The workflow implements conversational setup:
 

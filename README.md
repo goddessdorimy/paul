@@ -4,14 +4,14 @@
 
 **Plan-Apply-Unify Loop** — Structured AI-assisted development for opencode.
 
-[![npm version](https://img.shields.io/npm/v/paul-framework?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/paul-framework)
+[![npm version](https://img.shields.io/npm/v/paul-framework-opencode?style=for-the-badge&logo=npm&logoColor=white&color=CB3837)](https://www.npmjs.com/package/paul-framework-opencode)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/ChristopherKahler/paul?style=for-the-badge&logo=github&color=181717)](https://github.com/ChristopherKahler/paul)
 
 <br>
 
 ```bash
-npx paul-framework
+npx paul-framework-opencode
 ```
 
 **Works on Mac, Windows, and Linux.**
@@ -76,7 +76,7 @@ No sprint ceremonies. No story points. No enterprise theater. Just a system that
 ## Getting Started
 
 ```bash
-npx paul-framework
+npx paul-framework-opencode
 ```
 
 The installer prompts you to choose:
@@ -122,15 +122,15 @@ Verify with `/paul-help` inside opencode.
 ### Staying Updated
 
 ```bash
-npx paul-framework@latest
+npx paul-framework-opencode@latest
 ```
 
 <details>
 <summary><strong>Non-interactive Install</strong></summary>
 
 ```bash
-npx paul-framework --global   # Install to ~/.opencode/
-npx paul-framework --local    # Install to ./.opencode/
+npx paul-framework-opencode --global   # Install to ~/.opencode/
+npx paul-framework-opencode --local    # Install to ./.opencode/
 ```
 
 </details>
@@ -496,7 +496,7 @@ APPLY blocks until required skills are confirmed loaded.
 
 **Commands not working as expected?**
 - Run `/paul-help` to verify installation
-- Re-run `npx paul-framework` to reinstall
+- Re-run `npx paul-framework-opencode` to reinstall
 
 **Loop position seems wrong?**
 - Check `.paul/STATE.md` for current state

@@ -20,9 +20,9 @@ Next phase: PLAN (next plan or next phase)
 </required_reading>
 
 <references>
-@~/.opencode/paul-framework/references/loop-phases.md
-@~/.opencode/paul-framework/templates/SUMMARY.md
-@~/.opencode/paul-framework/workflows/transition-phase.md (loaded when last plan in phase)
+@~/.opencode/paul-framework-opencode/references/loop-phases.md
+@~/.opencode/paul-framework-opencode/templates/SUMMARY.md
+@~/.opencode/paul-framework-opencode/workflows/transition-phase.md (loaded when last plan in phase)
 </references>
 
 <process>
@@ -237,7 +237,7 @@ Continue to next plan?
    ════════════════════════════════════════
    ```
 
-2. **MUST read and execute:** @~/.opencode/paul-framework/workflows/transition-phase.md
+2. **MUST read and execute:** @~/.opencode/paul-framework-opencode/workflows/transition-phase.md
 
 3. Transition handles (do not skip any):
    - Evolve PROJECT.md (requirements validated → shipped)

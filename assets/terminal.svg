@@ -38,7 +38,7 @@
     <!-- Prompt line -->
     <text class="text prompt" font-size="15" y="0">~</text>
     <text class="text dim" font-size="15" x="16" y="0">$</text>
-    <text class="text command" font-size="15" x="36" y="0">npx paul-framework</text>
+    <text class="text command" font-size="15" x="36" y="0">npx paul-framework-opencode</text>
 
     <!-- Banner -->
     <text class="text cyan" font-size="14" y="48" xml:space="preserve">  ██████╗  █████╗ ██╗   ██╗██╗</text>
@@ -54,7 +54,7 @@
 
     <!-- Install output -->
     <text class="text" font-size="15" y="260"><tspan class="green">  ✓</tspan><tspan class="white"> Installed commands/paul</tspan></text>
-    <text class="text" font-size="15" y="284"><tspan class="green">  ✓</tspan><tspan class="white"> Installed paul-framework</tspan></text>
+    <text class="text" font-size="15" y="284"><tspan class="green">  ✓</tspan><tspan class="white"> Installed paul-framework-opencode</tspan></text>
 
     <!-- Done message -->
     <text class="text" font-size="15" y="332"><tspan class="green">  Done!</tspan><tspan class="white"> Run </tspan><tspan class="cyan">/paul-help</tspan><tspan class="white"> to get started.</tspan></text>
