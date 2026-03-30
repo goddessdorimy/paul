@@ -21,15 +21,26 @@ def ejecutar_reemplazo():
             path = os.path.join(root, file)
             try:
                 with open(path, 'r', encoding='utf-8') as f:
-                    data = f.read()
+                    lineas = f.readlines()
                 
-                nuevo_contenido = data
-                for viejo, nuevo in REEMPLAZOS.items():
-                    # El flag re.IGNORECASE hace la magia
-                    insensible = re.compile(re.escape(viejo), re.IGNORECASE)
-                    nuevo_contenido = insensible.sub(nuevo, nuevo_contenido)
+                nuevas_lineas = []
+                for linea in lineas:
+                    # OBVIAR VERSIÓN: Si es el package.json y la línea tiene "version", no la tocamos
+                    if file == "package.json" and '"version":' in linea:
+                        nuevas_lineas.append(linea)
+                        continue
+                    
+                    # Proceso de reemplazo normal
+                    nueva_linea = linea
+                    for viejo, nuevo in REEMPLAZOS.items():
+                        insensible = re.compile(re.escape(viejo), re.IGNORECASE)
+                        nueva_linea = insensible.sub(nuevo, nueva_linea)
+                    nuevas_lineas.append(nueva_linea)
                 
-                if nuevo_contenido != data:
+                nuevo_contenido = "".join(nuevas_lineas)
+                original_contenido = "".join(lineas)
+
+                if nuevo_contenido != original_contenido:
                     with open(path, 'w', encoding='utf-8') as f:
                         f.write(nuevo_contenido)
             except: pass
