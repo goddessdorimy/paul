@@ -1,12 +1,7 @@
 {
   "name": "paul-framework-opencode",
-<<<<<<< HEAD
-  "version": "1.1.1",
-  "description": "Plan-Apply-Unify Loop - A structured AI-assisted development framework for opencode",
-=======
   "version": "1.2.0",
   "description": "Plan-Apply-Unify Loop - A structured AI-assisted development framework for opencode",
->>>>>>> upstream/main
   "bin": {
     "paul-framework-opencode": "bin/install.js"
   },
@@ -31,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristopherKahler/paul.git"
+    "url": "https://github.com/goddessdorimy/paul.git"
   },
   "bugs": {
-    "url": "https://github.com/ChristopherKahler/paul/issues"
+    "url": "https://github.com/goddessdorimy/paul/issues"
   },
-  "homepage": "https://github.com/ChristopherKahler/paul#readme",
+  "homepage": "https://github.com/goddessdorimy/paul#readme",
   "engines": {
     "node": ">=16.7.0"
   }
