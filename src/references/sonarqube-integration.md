@@ -13,7 +13,7 @@ Reference for integrating SonarQube code quality scanning with PAUL.
 - Code coverage tracking
 - Duplicate code detection
 
-**Why integrate with PAUL:**
+**Why integrate with paul-**
 - Auto-populate CONCERNS.md with real issues
 - Objective quality metrics for planning
 - Track improvement over time
@@ -98,7 +98,7 @@ mcp__sonarqube__sonar_scan
 
 Or use PAUL workflow:
 ```
-/paul:quality-gate
+/paul-quality-gate
 ```
 
 ### Step 4: Verify Integration
@@ -117,7 +117,7 @@ mcp__sonarqube__sonar_get_metrics
 
 Run quality checks anytime:
 ```
-/paul:quality-gate
+/paul-quality-gate
 ```
 
 This will:

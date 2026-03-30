@@ -57,8 +57,8 @@ enterprise_plan_audit:
 ```
 
 **When enabled:**
-- `/paul:plan` suggests running `/paul:audit` before APPLY
-- `/paul:audit` performs enterprise-grade architectural review
+- `/paul-plan` suggests running `/paul-audit` before APPLY
+- `/paul-audit` performs enterprise-grade architectural review
 - Must-have and strongly-recommended findings auto-applied to plan
 - Audit report saved alongside PLAN.md as `{NN}-{PP}-AUDIT.md`
 
