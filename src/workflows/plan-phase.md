@@ -359,11 +359,7 @@ This flag determines whether the post-plan routing suggests audit before APPLY.
 
    [1] Approved, run APPLY | [2] Questions first | [3] Pause here
    ```
-<<<<<<< HEAD
-4. **Accept quick inputs:** "1", "approved", "yes", "go" → run `/paul-apply [plan-path]`
-=======
    Accept quick inputs: "1", "approved", "yes", "go" → run `/paul-apply [plan-path]`
->>>>>>> upstream/main
 </step>
 
 </process>

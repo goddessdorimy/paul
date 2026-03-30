@@ -56,12 +56,8 @@ The complexity is in the system, not your workflow. Behind the scenes: structure
 
 PAUL isn't just for code. It manages marketing campaigns, funnel builds, email sequences, and automation workflows with the same rigor it brings to software development.
 
-<<<<<<< HEAD
-You describe what you want, opencode builds it, and PAUL ensures:
-=======
 You describe what you want, opencode builds it, and PAUL ensures:
 - **Init gathers real requirements** — type-adapted walkthrough produces a populated project brief, not empty placeholders
->>>>>>> upstream/main
 - Plans have clear acceptance criteria
 - **Every task is qualified against the spec** — not just executed and assumed correct
 - Execution stays bounded with explicit scope control
@@ -88,15 +84,6 @@ Verify with `/paul-help` inside opencode.
 
 ```bash
 # 1. Initialize PAUL in your project
-<<<<<<< HEAD
-/paul-init
-
-# 2. Create a plan for your work
-/paul-plan
-
-# 3. Execute the approved plan
-/paul-apply
-=======
 #    Walks through type-adapted requirements (app, campaign, workflow)
 #    Produces a populated PROJECT.md — not empty placeholders
 /paul-init
@@ -110,7 +97,6 @@ Verify with `/paul-help` inside opencode.
 #    Each task goes through Execute/Qualify loop
 #    Escalation statuses: DONE, DONE_WITH_CONCERNS, NEEDS_CONTEXT, BLOCKED
 /paul-apply
->>>>>>> upstream/main
 
 # 4. Close the loop (required!)
 /paul-unify
@@ -193,21 +179,12 @@ PAUL provides 26 commands organized by purpose. Run `/paul-help` for the complet
 
 | Command | What it does |
 |---------|--------------|
-<<<<<<< HEAD
-| `/paul-init` | Initialize PAUL in a project |
-| `/paul-plan [phase]` | Create an executable plan |
-| `/paul-apply [path]` | Execute an approved plan |
-| `/paul-unify [path]` | Reconcile and close the loop |
-| `/paul-help` | Show command reference |
-| `/paul-status` | Show loop position *(deprecated — use progress)* |
-=======
 | `/paul-init` | Initialize PAUL with type-adapted requirements walkthrough |
 | `/paul-plan [phase]` | Create an executable plan (auto-routes quick-fix/standard/complex) |
 | `/paul-apply [path]` | Execute an approved plan |
 | `/paul-unify [path]` | Reconcile and close the loop |
 | `/paul-help` | Show command reference |
 | `/paul-status` | Show loop position *(deprecated — use progress)* |
->>>>>>> upstream/main
 
 ### Session
 

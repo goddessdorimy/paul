@@ -359,9 +359,6 @@ Usage: `/paul-verify`
 
 ---
 
-<<<<<<< HEAD
-### `/paul-plan-fix`
-=======
 ### `/paul-audit [plan-path]`
 Run enterprise-grade architectural audit on a plan.
 
@@ -376,7 +373,6 @@ Usage: `/paul-audit .paul/phases/20-ai-schema/20-01-PLAN.md`
 ---
 
 ### `/paul-plan-fix`
->>>>>>> upstream/main
 Plan fixes for UAT issues from verify.
 
 - Reads issues identified during verify
